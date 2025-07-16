@@ -11,10 +11,17 @@ body {
 .navbar {
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
 }
-.navbar-brand {
-   width: 8%;
+
+.navbar img {
+  max-width: 8.5%;
+  height: auto;
+  width: auto;
+  display: block; /* Opcional, pero ayuda a evitar espacios extra */
 }
+
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.75);
     transition: all 0.3s ease;
