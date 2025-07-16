@@ -1,88 +1,108 @@
-/* Estilos generales */
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
-    padding-top: 70px; /* Para evitar que el contenido quede debajo del fixed-top navbar */
-    overflow-x: hidden; /* Evita scroll horizontal */
+    padding-top: 70px;
+    overflow-x: hidden; 
 }
 
 /* Navbar */
 .navbar {
-    transition: background-color 0.3s ease; /* Transición suave para el fondo del navbar */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.75);
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 400;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     color: #ffffff;
-    transform: translateY(-2px); /* Pequeño efecto al hacer hover */
+    transform: translateY(-3px);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-/* Hero Section (Presentación) */
+/* === SECCIÓN HERO MODIFICADA PARA PARTICLES.JS === */
 .hero-section {
-    background: linear-gradient(to right, #001f3f, #007bff); /* Azul oscuro a azul vibrante */
-    min-height: 100vh; /* Ocupa el 100% del alto de la ventana */
-    position: relative;
-    overflow: hidden; /* Para las animaciones de fondo */
+    background-color: #1a1a2e; 
+    min-height: 100vh;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.hero-section::before {
-    content: '';
+#particles-js {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100%" height="100%" fill="none"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23ffffff" stroke-opacity="0.1" stroke-width="1"/></svg>') repeat;
-    opacity: 0; /* Inicialmente invisible */
-    animation: backgroundFadeIn 2s forwards; /* Animación de aparición */
+    top: 0;
+    left: 0;
+    z-index: 0; 
 }
 
-@keyframes backgroundFadeIn {
-    from { opacity: 0; }
-    to { opacity: 0.3; } /* El patrón de fondo se hace visible */
+.hero-section .container {
+    position: relative; 
+    z-index: 1;
 }
 
+
+
+/* Estilos para el contenido del banner */
 .hero-section h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 20px;
-    opacity: 0; /* Inicialmente invisible */
-    transform: translateY(-20px); /* Inicialmente movido hacia arriba */
-    animation: fadeInSlideDown 1.5s forwards; /* Animación de aparición y deslizamiento */
+    margin-bottom: 25px;
 }
 
 .hero-section p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 300;
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInSlideUp 1.5s forwards 0.5s; /* Retraso de 0.5s */
+    max-width: 900px;
+    margin: 0 auto 40px auto;
 }
 
 .hero-section .btn {
-    opacity: 0;
-    transform: scale(0.8);
-    animation: zoomIn 1s forwards 1s; /* Retraso de 1s */
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-/* Animaciones específicas para la Hero Section */
+.hero-section .btn-outline-light:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.hero-section .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
 @keyframes fadeInSlideDown {
-    from { opacity: 0; transform: translateY(-20px); }
+    from { opacity: 0; transform: translateY(-30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInSlideUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -91,11 +111,78 @@ body {
     to { opacity: 1; transform: scale(1); }
 }
 
+/* Sección Sobre Mí */
+#sobre-mi {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+}
+
+#sobre-mi h2 {
+    color: #001f3f;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+#sobre-mi h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.6s ease-out;
+}
+
+#sobre-mi h2:hover::after {
+    transform: scaleX(1);
+}
+
+#sobre-mi .lead {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+#sobre-mi p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+#sobre-mi .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+#sobre-mi .card h4 {
+    color: #007bff;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(0, 123, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#sobre-mi .list-unstyled li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+#sobre-mi .list-unstyled li i {
+    color: #28a745;
+}
+#sobre-mi .list-unstyled li .bi-star-fill {
+    color: #ffc107;
+}
+
 /* Sección de Proyectos */
 #proyectos {
     padding-top: 80px;
     padding-bottom: 80px;
-    background-color: #f8f9fa;
+    background-color: #f0f2f5;
 }
 
 #proyectos h2 {
@@ -103,30 +190,29 @@ body {
     font-weight: 700;
     margin-bottom: 40px;
     position: relative;
-    display: inline-block; /* Para que la línea se ajuste al texto */
+    display: inline-block;
 }
 
 #proyectos h2::after {
     content: '';
     display: block;
-    width: 60%; /* Ancho de la línea */
+    width: 60%;
     height: 4px;
     background-color: #007bff;
     margin: 10px auto 0;
     border-radius: 2px;
-    transform: scaleX(0); /* Inicialmente invisible */
-    transition: transform 0.6s ease-out; /* Animación de aparición */
+    transform: scaleX(0);
+    transition: transform 0.6s ease-out;
 }
 
 #proyectos h2:hover::after {
-    transform: scaleX(1); /* La línea se expande al hacer hover */
+    transform: scaleX(1);
 }
 
-
 .project-card {
-    opacity: 0; /* Inicialmente invisible para animaciones con JS */
+    opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transición para JS */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .project-card.in-view {
@@ -136,24 +222,25 @@ body {
 
 .project-card .card {
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover en tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .project-card .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .project-card .card-img-top {
-    height: 250px;
+    height: 280px;
     object-fit: cover;
     border-bottom: 1px solid #eee;
 }
 
 .project-card .card-body {
-    padding: 25px;
+    padding: 30px;
     background-color: #fff;
 }
 
@@ -161,17 +248,22 @@ body {
     color: #001f3f;
     font-weight: 600;
     margin-bottom: 15px;
+    font-size: 1.4rem;
 }
 
 .project-card .card-text {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #555;
+    margin-bottom: 20px;
 }
 
 .project-card .btn {
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right: 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: 500;
 }
 
 .project-card .btn-primary {
@@ -183,6 +275,7 @@ body {
     background-color: #0056b3;
     border-color: #0056b3;
     transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.3);
 }
 
 .project-card .btn-secondary {
@@ -194,56 +287,109 @@ body {
     background-color: #5a6268;
     border-color: #5a6268;
     transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(108, 117, 125, 0.3);
 }
 
 /* Contacto y Footer */
 #contacto {
-    background: linear-gradient(to left, #001f3f, #343a40); /* Degradado oscuro */
+    background: linear-gradient(to left, #001f3f, #343a40);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#contacto .btn-outline-light {
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 #contacto .btn-outline-light:hover {
     background-color: #007bff;
     border-color: #007bff;
     color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
 
 footer {
-    background-color: #212529 !important; /* Un poco más oscuro que el navbar */
+    background-color: #1a1d20 !important;
     color: rgba(255, 255, 255, 0.6);
+    padding: 20px 0;
+    font-size: 0.9rem;
 }
 
 /* Media Queries para responsividad */
 @media (max-width: 992px) {
     .hero-section h1 {
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
 
     .hero-section p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+    }
+
+    #sobre-mi .col-lg-6 {
+        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 80vh; /* Ajuste para móviles */
+        min-height: 80vh;
     }
 
     .hero-section h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .hero-section p {
-        font-size: 1rem;
-        padding: 0 15px; /* Pequeño padding para móviles */
+        font-size: 1.1rem;
+        padding: 0 15px;
     }
 
     .project-card {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
+    }
+
+    .project-card .card-img-top {
+        height: 200px;
+    }
+
+    .project-card .card-body {
+        padding: 20px;
+    }
+
+    .project-card .card-title {
+        font-size: 1.2rem;
+    }
+
+    .project-card .card-text {
+        font-size: 0.9rem;
+    }
+
+    #contacto .btn-outline-light {
+        font-size: 0.9rem;
+        padding: 8px 20px;
     }
 }
 
 @media (max-width: 576px) {
     .hero-section h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+    }
+
+    .hero-section .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #proyectos h2, #sobre-mi h2, #contacto h2 {
+        font-size: 2rem;
     }
 }
