@@ -40,12 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Pequeño efecto para los enlaces del nav al hacer click (scroll suave)
-    document.querySelectorAll('.navbar-nav a').forEach(anchor => {
+   document.querySelectorAll('.navbar-nav a').forEach(anchor => {
+    // Verifica si el enlace es interno (comienza con #)
+    if (anchor.getAttribute('href').startsWith('#')) {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+            e.preventDefault(); // Evita el salto brusco solo para enlaces internos
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
-    });
+    }
+    // Si el enlace no comienza con # (como "blog.html"), no se le añade este comportamiento
+    // y funcionará de manera normal, abriendo la nueva página.
 });
+            });
