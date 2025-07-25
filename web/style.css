@@ -1,21 +1,27 @@
-/* Estilos generales */
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
-    padding-top: 70px; /* Para evitar que el contenido quede debajo del fixed-top navbar */
-    overflow-x: hidden; /* Evita scroll horizontal */
+    padding-top: 70px;
+    overflow-x: hidden; 
 }
 
 /* Navbar */
 .navbar {
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
 }
-.navbar-brand {
-   width: 8%;
+
+.navbar img {
+  max-width: 8.5%;
+  height: auto;
+  width: auto;
+  display: block; /* Opcional, pero ayuda a evitar espacios extra */
 }
+
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.75);
     transition: all 0.3s ease;
@@ -29,11 +35,11 @@ body {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-/* === SECCIÓN HERO MODIFICADA PARA PARTICLES.JS === */
+
 .hero-section {
-    background-color: #1a1a2e; /* Un fondo azul noche oscuro */
+    background-color: #1a1a2e;
     min-height: 100vh;
-    position: relative; /* Cambiado a relative para contener las partículas */
+    position: relative; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,14 +52,14 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 0; /* Pone el lienzo de partículas detrás del contenido */
+    z-index: 0; 
 }
 
 .hero-section .container {
-    position: relative; /* Asegura que el contenido del banner esté sobre las partículas */
+    position: relative; 
     z-index: 1;
 }
-/* === FIN DE LA SECCIÓN MODIFICADA === */
+
 
 
 /* Estilos para el contenido del banner (títulos, párrafos, botones) */
@@ -97,7 +103,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Animaciones específicas para la Hero Section (ya no se usan las de la plantilla anterior pero se dejan por si acaso) */
+
 @keyframes fadeInSlideDown {
     from { opacity: 0; transform: translateY(-30px); }
     to { opacity: 1; transform: translateY(0); }
@@ -322,7 +328,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Media Queries para responsividad */
+
 @media (max-width: 992px) {
     .hero-section h1 {
         font-size: 3rem;
