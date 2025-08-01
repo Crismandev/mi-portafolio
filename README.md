@@ -1,6 +1,13 @@
-# mi-portafolio
-Mi primer portafolio web desarrollado para uso personal 
-Lenguajes usados: 
--HTML
--CSS
--JavaScript
+# 💼 Portafolio Personal - Cristhian Mantilla
+
+## 🚀 Descripción
+Portafolio web personal que muestra mis proyectos, habilidades y experiencia como desarrollador.
+
+## 🛠️ Tecnologías Utilizadas
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- Particles.js
+
+## 📁 Estructura del Proyecto
