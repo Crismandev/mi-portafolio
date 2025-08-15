@@ -197,9 +197,36 @@
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('Fondo de partículas cargado exitosamente.');
-        });
+        // Verificar que particles.js se haya cargado correctamente
+        if (typeof particlesJS !== 'undefined') {
+            console.log('particles.js cargado correctamente');
+            
+            // Verificar que el contenedor existe
+            const particlesContainer = document.getElementById('particles-js');
+            if (particlesContainer) {
+                console.log('Contenedor #particles-js encontrado');
+                
+                // Cargar la configuración de partículas
+                particlesJS.load('particles-js', 'assets/js/particles.json', function() {
+                    console.log('Configuración de partículas cargada exitosamente');
+                    
+                    // Verificar si las partículas se han renderizado
+                    setTimeout(() => {
+                        const canvas = particlesContainer.querySelector('canvas');
+                        if (canvas) {
+                            console.log('Canvas de partículas creado exitosamente');
+                            console.log('Dimensiones del canvas:', canvas.width + 'x' + canvas.height);
+                        } else {
+                            console.error('No se pudo crear el canvas de partículas');
+                        }
+                    }, 1000);
+                });
+            } else {
+                console.error('No se encontró el contenedor #particles-js');
+            }
+        } else {
+            console.error('particles.js no se cargó correctamente');
+        }
     </script>
 </body>
 

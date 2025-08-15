@@ -52,7 +52,18 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 0; 
+    z-index: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+#particles-js canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .hero-section .container {
