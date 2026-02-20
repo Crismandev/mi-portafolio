@@ -1,9 +1,9 @@
 body {
     font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7; /* Increased for better readability */
     color: #333;
     background-color: #f8f9fa;
-    padding-top: 70px;
+    padding-top: 56px;
     overflow-x: hidden; 
 }
 
@@ -12,14 +12,21 @@ body {
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     
 }
 
 .navbar img {
-  max-width: 8.5%;
+  max-width: 5%;
   height: auto;
   width: auto;
   display: block; /* Opcional, pero ayuda a evitar espacios extra */
+}
+
+.navbar-nav .nav-link {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -37,7 +44,7 @@ body {
 
 
 .hero-section {
-    background-color: #1a1a2e;
+    background: radial-gradient(circle at center, #2a2a4e, #1a1a2e); /* Subtle gradient for depth */
     min-height: 100vh;
     position: relative; 
     display: flex;
@@ -241,21 +248,27 @@ body {
 
 .project-card .card {
     border: none;
-    border-radius: 12px;
+    border-radius: 16px; /* More rounded */
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smoother transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Softer initial shadow */
+    background: #fff;
 }
 
 .project-card .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); /* Deep elegant shadow on hover */
 }
 
 .project-card .card-img-top {
     height: 280px;
     object-fit: cover;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.5s ease;
+}
+
+.project-card .card:hover .card-img-top {
+    transform: scale(1.03); /* Subtle zoom effect */
 }
 
 .project-card .card-body {
@@ -288,25 +301,28 @@ body {
 .project-card .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
 }
 
 .project-card .btn-primary:hover {
     background-color: #0056b3;
     border-color: #0056b3;
     transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
 }
 
 .project-card .btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #f8f9fa;
+    color: #495057;
+    border-color: #dee2e6;
 }
 
 .project-card .btn-secondary:hover {
-    background-color: #5a6268;
-    border-color: #5a6268;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+    color: #212529;
     transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(108, 117, 125, 0.3);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Contacto y Footer */
