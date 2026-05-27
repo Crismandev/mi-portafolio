@@ -1,0 +1,127 @@
+/* ==========================================================================
+   PORTFOLIO BLOG SPECIFIC STYLESHEET - CRISTHIAN MANTILLA
+   ========================================================================== */
+
+.blog-post {
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    transition: opacity var(--transition-slow);
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.post-title {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.post-title a {
+    color: var(--text-primary) !important;
+    transition: color var(--transition-fast) !important;
+}
+
+.post-title a:hover {
+    color: var(--accent) !important;
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.post-excerpt {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+}
+
+/* Sidebar Styling Overrides */
+.blog-sidebar .blog-card {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: var(--radius-md) !important;
+    overflow: hidden;
+    margin-bottom: var(--space-md);
+    box-shadow: var(--card-shadow) !important;
+    transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+.blog-sidebar .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.blog-sidebar .card-header {
+    background: rgba(var(--accent-rgb), 0.05) !important;
+    border-bottom: 1px solid var(--card-border) !important;
+    color: var(--text-primary) !important;
+    font-weight: 700;
+    padding: var(--space-sm);
+}
+
+.blog-sidebar .card-body {
+    padding: var(--space-md) !important;
+    background: transparent !important;
+}
+
+.blog-sidebar .card-text {
+    color: var(--text-secondary);
+}
+
+.blog-sidebar .list-group-item {
+    background: transparent !important;
+    border-color: var(--card-border) !important;
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.blog-sidebar .list-group-item:hover {
+    background: rgba(var(--accent-rgb), 0.05) !important;
+    color: var(--text-primary) !important;
+}
+
+.blog-sidebar .badge {
+    background: var(--accent-gradient) !important;
+    color: #000000 !important;
+    font-weight: 700;
+}
+[data-theme="light"] .blog-sidebar .badge {
+    color: #ffffff !important;
+}
+
+/* Button overrides in blog */
+.blog-post .btn-outline-primary {
+    border: 1px solid var(--accent) !important;
+    color: var(--accent) !important;
+    background: transparent !important;
+}
+
+.blog-post .btn-outline-primary:hover {
+    background: var(--accent-gradient) !important;
+    color: #000000 !important;
+    border-color: transparent !important;
+    box-shadow: 0 8px 16px -8px rgba(var(--accent-rgb), 0.5) !important;
+}
+[data-theme="light"] .blog-post .btn-outline-primary:hover {
+    color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-post {
+        padding-bottom: var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+    
+    .post-title {
+        font-size: 1.4rem;
+    }
+}

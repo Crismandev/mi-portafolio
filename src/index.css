@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* --------------------------------------------------------------------------
+   1. PREMIUM DESIGN SYSTEM VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Vibrant color palette */
+  --primary: #00f2fe;
+  --primary-rgb: 0, 242, 254;
+  --secondary: #4facfe;
+  --accent: #9d50bb;
+  --accent-secondary: #f72585;
+  
+  /* Core layout variables - Dark Mode (Default) */
+  --bg: #030712;
+  --text: #f9fafb;
+  --text-muted: #9ca3af;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #0b0f19, #030712);
+  --blob-opacity: 0.2;
+  
+  /* Glassmorphism system */
+  --card-bg: rgba(17, 24, 39, 0.6);
+  --glass: rgba(17, 24, 39, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shadow: rgba(0, 0, 0, 0.6);
+  --nav-bg: rgba(3, 7, 18, 0.65);
+  --nav-border: rgba(255, 255, 255, 0.04);
+  
+  /* Code / Terminal tokens */
+  --terminal-bg: #090d16;
+  --terminal-border: rgba(255, 255, 255, 0.06);
+  --terminal-header: rgba(17, 24, 39, 0.8);
+}
+
+/* Light Theme overrides when .dark is NOT present */
+:root:not(.dark) {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --text-muted: #475569;
+  
+  --bg-gradient: radial-gradient(circle at 50% 50%, #f1f5f9, #e2e8f0);
+  --blob-opacity: 0.35;
+  
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --glass: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --glass-shadow: rgba(148, 163, 184, 0.15);
+  --nav-bg: rgba(248, 250, 252, 0.75);
+  --nav-border: rgba(0, 0, 0, 0.05);
+  
+  /* Code / Terminal tokens */
+  --terminal-bg: #f1f5f9;
+  --terminal-border: rgba(0, 0, 0, 0.06);
+  --terminal-header: rgba(226, 232, 240, 0.8);
+}
+
+/* --------------------------------------------------------------------------
+   2. BASE SETUP & TRANSITIONS
+   -------------------------------------------------------------------------- */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Custom Selection Highlight */
+::selection {
+  background-color: rgba(var(--primary-rgb), 0.25);
+  color: var(--text);
+}
+
+/* --------------------------------------------------------------------------
+   3. CURSOR SPOTLIGHT EFFECT
+   -------------------------------------------------------------------------- */
+.spotlight-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(var(--primary-rgb), 0.05),
+    transparent 80%
+  );
+  transition: background 0.1s ease;
+}
+
+/* Background Blobs */
+.bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: var(--bg-gradient);
+  overflow: hidden;
+  transition: background 0.4s ease;
+}
+
+.blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  filter: blur(100px);
+  border-radius: 50%;
+  opacity: var(--blob-opacity);
+  animation: floatBlobs 25s infinite alternate;
+  transition: opacity 0.4s ease;
+}
+
+.blob-1 { top: -150px; left: -150px; animation-duration: 30s; }
+.blob-2 { bottom: -150px; right: -150px; animation-duration: 35s; background: linear-gradient(135deg, var(--accent-secondary), var(--accent)); }
+.blob-3 { top: 35%; left: 25%; animation-duration: 25s; background: linear-gradient(135deg, #00f2fe, #f72585); }
+
+@keyframes floatBlobs {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(80px, 50px) scale(1.1) rotate(180deg); }
+  100% { transform: translate(-50px, 120px) scale(0.9) rotate(360deg); }
+}
+
+/* --------------------------------------------------------------------------
+   4. GLASSMORPHISM & CARD EFFECTS
+   -------------------------------------------------------------------------- */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px 0 var(--glass-shadow);
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px 0 var(--glass-shadow);
+  border-radius: 24px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(var(--primary-rgb), 0.35);
+  box-shadow: 0 20px 40px -10px var(--glass-shadow), 
+              0 0 15px -2px rgba(var(--primary-rgb), 0.15);
+}
+
+/* Glowing Border Cards */
+.glow-card {
+  position: relative;
+  z-index: 1;
+}
+
+.glow-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(
+    250px circle at var(--card-mouse-x, 50%) var(--card-mouse-y, 50%),
+    rgba(var(--primary-rgb), 0.5),
+    transparent 60%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.glow-card:hover::before {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   5. INTERACTIVE TERMINAL
+   -------------------------------------------------------------------------- */
+.terminal-window {
+  background-color: var(--terminal-bg);
+  border: 1px solid var(--terminal-border);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px -15px var(--glass-shadow);
+  overflow: hidden;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.terminal-header {
+  background-color: var(--terminal-header);
+  border-bottom: 1px solid var(--terminal-border);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-body {
+  padding: 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Typing indicator cursor */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: var(--primary);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   6. PREMIUM GRADIENTS & TEXT
+   -------------------------------------------------------------------------- */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: animateShine 6s linear infinite;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 50%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+}
+
+@keyframes animateShine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 5px;
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* --------------------------------------------------------------------------
+   7. STYLING OVERRIDES & COMPATIBILITIES
+   -------------------------------------------------------------------------- */
+.nav-link-active {
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Progress ring styling */
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.8s ease-in-out;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
