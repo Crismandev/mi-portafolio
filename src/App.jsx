@@ -448,20 +448,9 @@ function App() {
                   <div className="space-y-6">
                     {section.skills.map((skill, sIdx) => (
                       <div key={sIdx} className="space-y-1">
-                        <div className="flex justify-between items-center gap-2">
-                          <div className="flex items-center gap-1.5 min-w-0">
-                            <ChevronRight className="w-3.5 h-3.5 dark:text-primary text-primary flex-shrink-0" />
-                            <span className="font-semibold dark:text-gray-200 text-gray-800 text-xs md:text-sm truncate">{skill.name}</span>
-                          </div>
-                          <span className={`text-[9px] px-2 py-0.5 rounded-full border font-mono font-bold uppercase tracking-wider flex-shrink-0 ${
-                            skill.status === 'Experto' 
-                              ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30' 
-                              : skill.status === 'Avanzado'
-                              ? 'bg-primary/10 text-primary border-primary/30'
-                              : 'bg-blue-500/10 text-blue-400 border-blue-500/30'
-                          }`}>
-                            {skill.status}
-                          </span>
+                        <div className="flex items-center gap-1.5 min-w-0">
+                          <ChevronRight className="w-3.5 h-3.5 dark:text-primary text-primary flex-shrink-0" />
+                          <span className="font-semibold dark:text-gray-200 text-gray-800 text-xs md:text-sm truncate">{skill.name}</span>
                         </div>
                         <p className="text-[11px] dark:text-gray-400 text-gray-500 leading-tight pl-5">
                           {skill.desc}
