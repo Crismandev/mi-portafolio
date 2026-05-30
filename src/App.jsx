@@ -11,6 +11,17 @@ import './App.css';
 // Extended projects list with detailed case studies
 const projects = [
   {
+    id: "stickerswap",
+    title: "Sticker Swap — FIFA World Cup 2026",
+    desc: "PWA premium de emparejamiento inteligente y coordinación en tiempo real para intercambio de figuritas del Mundial.",
+    category: "Herramientas",
+    tech: ["Next.js 15", "Supabase", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    image: "/assets/images/projects/sticker_swap.png",
+    link: "https://github.com/Crismandev/sticker-swap",
+    featured: true,
+    details: "EL PROBLEMA REAL:\nEl intercambio de figuritas del álbum del Mundial de la FIFA tradicionalmente es ineficiente y frustrante. Los coleccionistas asisten a reuniones físicas masivas con listas impresas o escritas a mano, pasando horas intentando comparar manualmente sus listas de faltantes y repetidas con las de decenas de personas. Esto genera una gran pérdida de tiempo, fatiga cognitiva y negociaciones fallidas debido a la falta de un sistema que coordine intercambios recíprocos exactos (donde el usuario A tenga lo que el usuario B necesita, y viceversa) antes de encontrarse.\n\nLA SOLUCIÓN REAL & IMPLEMENTACIÓN:\nSticker Swap automatiza y digitaliza el intercambio mediante un sistema de emparejamiento bilateral ('double match') en tiempo real.\n\n1. Gestión Digital del Álbum: Interfaz ágil e interactiva de alta fidelidad donde el usuario marca con simples clics el estado de su colección (Pegadas, Repetidas, Faltantes).\n2. Algoritmo de Intercambio Bilateral: El motor de base de datos en Supabase calcula instantáneamente cruces relacionales entre las colecciones de usuarios cercanos para proponer ofertas de intercambio donde ambas partes se benefician mutuamente al 100%.\n3. Experiencia de Descubrimiento 'Tinder-style': Implementación de una interfaz de tarjetas deslizables (CardStack) con gestos táctiles fluidos animados en Framer Motion, donde se despliega la propuesta exacta ('Tú le das A, B, C; recibes X, Y, Z').\n4. Coordinación Inmediata: Al deslizar a la derecha en una propuesta con interés mutuo, se genera un Match instantáneo, abriendo un canal de chat en tiempo real por websockets/Supabase Realtime para que los coleccionistas coordinen el encuentro físico de forma segura y eficiente."
+  },
+  {
     id: "wicho",
     title: "WICHO EN LÍNEA",
     desc: "Plataforma integral de e-commerce con estética Glassmorphism avanzada.",
@@ -18,7 +29,7 @@ const projects = [
     tech: ["Firebase", "Tailwind CSS", "React", "Node.js"],
     image: "/assets/images/projects/wicho_featured.png",
     link: "#",
-    featured: true,
+    featured: false,
     details: "Wicho en Línea es una solución de comercio electrónico a medida construida con React y Firebase. El núcleo del diseño es una interfaz glassmorphic premium que prioriza el contenido visual. Incluye pasarela de pago simulada, panel de administración para gestión de stock en tiempo real e inicio de sesión integrado con autenticación multifactor."
   },
   {
@@ -159,13 +170,13 @@ function App() {
         response = 'Soy Cristhian Mantilla, estudiante avanzado de Computación e Informática. Apasionado del diseño premium de UI/UX, arquitectura frontend robusta (React 19) e integración de APIs comerciales sólidas.';
         break;
       case 'skills':
-        response = '{\n  "frontend": ["React 19", "Tailwind v4", "Vite", "Framer Motion"],\n  "backend": ["Firebase", "Node.js", "REST APIs", "WhatsApp API"],\n  "design": ["Glassmorphism", "Figma-to-Code", "Responsive"],\n  "artificial_intelligence": ["LLMs integration", "Agents & Orchestration", "n8n Workflows"]\n}';
+        response = '{\n  "frontend": ["React 19", "Next.js 15", "Tailwind v4", "Framer Motion"],\n  "backend": ["Supabase", "Firebase", "Node.js", "REST APIs", "WhatsApp API"],\n  "design": ["Glassmorphism", "Figma-to-Code", "Responsive UX"],\n  "artificial_intelligence": ["LLMs integration", "Agents & Orchestration", "n8n Workflows"]\n}';
         break;
       case 'projects':
         response = 'Proyectos Cargados:\n' + projects.map(p => `  - [${p.category}] ${p.title} -> ${p.desc}`).join('\n');
         break;
       case 'stats':
-        response = 'Métricas:\n  - Proyectos Completados: 7+\n  - Contribuciones GitHub: 300+\n  - Tecnologías core: 12\n  - Clientes Satisfechos: 5';
+        response = 'Métricas:\n  - Proyectos Completados: 8+\n  - Contribuciones GitHub: 300+\n  - Tecnologías core: 15\n  - Clientes Satisfechos: 5';
         break;
       case 'clear':
         setCliHistory([]);
@@ -222,7 +233,7 @@ function App() {
                 <a 
                   key={item} 
                   href={`#${item.toLowerCase()}`} 
-                  className="text-sm font-medium dark:text-gray-300 dark:hover:text-cyan-400 text-gray-700 hover:text-cyan-600 transition-colors tracking-wide"
+                  className="text-sm font-medium dark:text-gray-300 dark:hover:text-primary text-gray-700 hover:text-primary transition-colors tracking-wide"
                 >
                   {item}
                 </a>
@@ -231,7 +242,7 @@ function App() {
             
             <button 
               onClick={toggleTheme}
-              className="theme-toggle-btn p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-all text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer"
+              className="theme-toggle-btn p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-all text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary cursor-pointer"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Sun className="w-5 h-5 theme-icon" /> : <Moon className="w-5 h-5 theme-icon" />}
@@ -254,12 +265,12 @@ function App() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-7"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/25 text-primary text-xs font-semibold mb-6">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse" /> Disponible para nuevos retos
               </div>
-              <h1 className="mb-6 leading-tight">
-                Creando la Próxima <br/>
-                <span className="text-gradient">Experiencia Digital</span>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[1.05] mb-6 font-display text-gray-900 dark:text-white">
+                Diseño Interactivo & <br/>
+                <span className="text-gradient">Desarrollo Frontend</span>
               </h1>
               <p className="text-lg dark:text-gray-400 text-gray-600 mb-8 max-w-xl leading-relaxed">
                 Hola, soy <span className="dark:text-white text-gray-900 font-semibold">Cristhian Mantilla</span>, un programador con mentalidad de diseñador. Creo productos interactivos modernos combinando la potencia de React, animaciones optimizadas y layouts limpios.
@@ -267,12 +278,12 @@ function App() {
               <div className="flex flex-wrap gap-4">
                 <a 
                   href="#proyectos" 
-                  className="px-8 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-bold hover:shadow-[0_0_30px_rgba(6,182,212,0.45)] text-white transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                  className="px-8 py-3.5 bg-gradient-to-r from-primary to-secondary rounded-full font-bold hover:shadow-[0_0_30px_rgba(139,92,246,0.35)] text-white transition-all transform hover:-translate-y-0.5 active:translate-y-0"
                 >
                   Explorar Proyectos
                 </a>
                 <a 
-                  href="/assets/pdf/CV_Cristhian_Mantilla_.pdf" 
+                  href="/assets/pdf/CV_Cristhian_Mantilla_05_02.pdf" 
                   download 
                   className="px-8 py-3.5 glass rounded-full font-bold dark:text-white text-gray-800 hover:bg-black/5 dark:hover:bg-white/10 transition-all flex items-center gap-2"
                 >
@@ -300,7 +311,7 @@ function App() {
                     <div key={idx} className="mb-2.5">
                       {item.type === 'input' ? (
                         <div>
-                          <span className="text-cyan-400 font-bold">❯</span> <span className="dark:text-white text-gray-900 font-semibold">{item.text}</span>
+                          <span className="text-primary font-bold">❯</span> <span className="dark:text-white text-gray-900 font-semibold">{item.text}</span>
                         </div>
                       ) : (
                         <pre className="dark:text-gray-300 text-gray-800 whitespace-pre-wrap text-xs font-mono bg-black/5 dark:bg-white/5 p-2 rounded-md border dark:border-white/5 border-black/10 mt-1">{item.text}</pre>
@@ -309,7 +320,7 @@ function App() {
                   ))}
                   
                   <form onSubmit={handleCliSubmit} className="flex items-center mt-3">
-                    <span className="text-cyan-400 mr-2 font-bold">❯</span>
+                    <span className="text-primary mr-2 font-bold">❯</span>
                     <input 
                       type="text" 
                       value={cliInput}
@@ -334,7 +345,7 @@ function App() {
                         form?.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
                       }, 50);
                     }}
-                    className="text-xs font-mono px-3 py-1.5 rounded-md bg-cyan-500/10 hover:bg-cyan-500/20 dark:text-cyan-400 text-cyan-700 border border-cyan-500/20 hover:border-cyan-500/40 transition-all cursor-pointer"
+                    className="text-xs font-mono px-3 py-1.5 rounded-md bg-primary/10 hover:bg-primary/20 dark:text-primary text-primary/90 border border-primary/25 hover:border-primary/45 transition-all cursor-pointer"
                   >
                     {cmd}
                   </button>
@@ -348,10 +359,10 @@ function App() {
         <section className="glass px-8 py-10 rounded-[28px] border border-black/5 dark:border-white/5 my-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: <Award className="w-6 h-6 dark:text-cyan-400 text-cyan-600" />, count: "7+", label: "Proyectos Realizados" },
-              { icon: <Code2 className="w-6 h-6 dark:text-blue-400 text-blue-600" />, count: "12+", label: "Tecnologías Clave" },
-              { icon: <Coffee className="w-6 h-6 dark:text-purple-400 text-purple-600" />, count: "300+", label: "GitHub Commits" },
-              { icon: <User className="w-6 h-6 dark:text-pink-400 text-pink-600" />, count: "5+", label: "Clientes Felices" }
+              { icon: <Award className="w-6 h-6 dark:text-primary text-primary" />, count: "8+", label: "Proyectos Realizados" },
+              { icon: <Code2 className="w-6 h-6 dark:text-secondary text-secondary" />, count: "15+", label: "Tecnologías Clave" },
+              { icon: <Coffee className="w-6 h-6 dark:text-accent text-accent" />, count: "300+", label: "GitHub Commits" },
+              { icon: <User className="w-6 h-6 dark:text-accent-secondary text-accent-secondary" />, count: "5+", label: "Clientes Felices" }
             ].map((stat, i) => (
               <motion.div 
                 key={i}
@@ -379,7 +390,7 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { 
-                icon: <Code2 className="w-5 h-5 dark:text-cyan-400 text-cyan-600" />, 
+                icon: <Code2 className="w-5 h-5 dark:text-primary text-primary" />, 
                 title: "Frontend", 
                 skills: [
                   { name: "React 19 & Hooks", desc: "SPAs interactivas y control de estado reactivo.", status: "Avanzado" },
@@ -429,8 +440,8 @@ function App() {
                 className="glass-card glow-card p-6 flex flex-col justify-between"
               >
                 <div>
-                  <div className="text-cyan-400 mb-6 flex items-center gap-3">
-                    <div className="p-3 bg-cyan-500/10 rounded-2xl border border-cyan-500/20">{section.icon}</div>
+                  <div className="text-primary mb-6 flex items-center gap-3">
+                    <div className="p-3 bg-primary/10 rounded-2xl border border-primary/20">{section.icon}</div>
                     <h3 className="text-lg font-bold dark:text-white text-gray-900">{section.title}</h3>
                   </div>
                   
@@ -439,14 +450,14 @@ function App() {
                       <div key={sIdx} className="space-y-1">
                         <div className="flex justify-between items-center gap-2">
                           <div className="flex items-center gap-1.5 min-w-0">
-                            <ChevronRight className="w-3.5 h-3.5 dark:text-cyan-400 text-cyan-600 flex-shrink-0" />
+                            <ChevronRight className="w-3.5 h-3.5 dark:text-primary text-primary flex-shrink-0" />
                             <span className="font-semibold dark:text-gray-200 text-gray-800 text-xs md:text-sm truncate">{skill.name}</span>
                           </div>
                           <span className={`text-[9px] px-2 py-0.5 rounded-full border font-mono font-bold uppercase tracking-wider flex-shrink-0 ${
                             skill.status === 'Experto' 
                               ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30' 
                               : skill.status === 'Avanzado'
-                              ? 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30'
+                              ? 'bg-primary/10 text-primary border-primary/30'
                               : 'bg-blue-500/10 text-blue-400 border-blue-500/30'
                           }`}>
                             {skill.status}
@@ -485,7 +496,7 @@ function App() {
                   {filter === cat && (
                     <motion.div 
                       layoutId="activeFilter"
-                      className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full z-0"
+                      className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full z-0"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -518,7 +529,7 @@ function App() {
                   <div className="h-72 overflow-hidden relative">
                     {/* Hover demo icon overlay */}
                     <div className="absolute inset-0 bg-black/60 group-hover:bg-black/45 transition-all z-10 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
-                      <div className="p-4 bg-cyan-500/20 border border-cyan-500/40 rounded-full text-cyan-400 mb-2 scale-75 group-hover:scale-100 transition-all duration-300">
+                      <div className="p-4 bg-primary/20 border border-primary/45 rounded-full text-primary mb-2 scale-75 group-hover:scale-100 transition-all duration-300">
                         <Eye className="w-6 h-6" />
                       </div>
                       <span className="text-white text-sm font-bold tracking-wide">Estudiar Proyecto</span>
@@ -532,15 +543,15 @@ function App() {
                   
                   <div className="p-8 flex-grow flex flex-col">
                     <div className="flex justify-between items-start mb-4">
-                      <span className="text-xs font-mono dark:text-cyan-400 text-cyan-600 font-bold uppercase tracking-wider">{p.category}</span>
+                      <span className="text-xs font-mono dark:text-primary text-primary font-bold uppercase tracking-wider">{p.category}</span>
                       {p.featured && (
-                        <span className="px-3 py-1 bg-cyan-500/10 dark:text-cyan-400 text-cyan-600 text-xs rounded-full border border-cyan-500/30 font-semibold">
+                        <span className="px-3 py-1 bg-primary/10 dark:text-primary text-primary text-xs rounded-full border border-primary/30 font-semibold">
                           Destacado
                         </span>
                       )}
                     </div>
                     
-                    <h3 className="text-2xl font-bold dark:text-white text-gray-900 mb-3 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-2xl font-bold dark:text-white text-gray-900 mb-3 group-hover:text-primary dark:group-hover:text-primary transition-colors">
                       {p.title}
                     </h3>
                     <p className="dark:text-gray-400 text-gray-600 mb-6 text-sm flex-grow">
@@ -564,7 +575,7 @@ function App() {
         {/* CONTACT SECTION */}
         <section id="contacto" className="py-24">
           <div className="glass p-12 md:p-16 rounded-[32px] max-w-4xl mx-auto border border-white/5 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full filter blur-[60px] pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full filter blur-[60px] pointer-events-none"></div>
             
             <div className="text-center max-w-xl mx-auto mb-12">
               <h2 className="text-4xl font-extrabold mb-4">¿Hablamos de tu <span className="text-gradient">Proyecto</span>?</h2>
@@ -586,7 +597,7 @@ function App() {
                   href={social.link} 
                   target="_blank" 
                   onMouseMove={handleCardMouseMove}
-                  className={`flex flex-col items-center gap-3 p-6 rounded-2xl dark:bg-white/5 bg-black/5 border dark:border-white/5 border-black/10 hover:border-cyan-500/30 transition-all text-center group glow-card ${social.color}`}
+                  className={`flex flex-col items-center gap-3 p-6 rounded-2xl dark:bg-white/5 bg-black/5 border dark:border-white/5 border-black/10 hover:border-primary/30 transition-all text-center group glow-card ${social.color}`}
                 >
                   <div className="p-3 dark:bg-white/10 bg-black/5 rounded-xl group-hover:scale-110 transition-transform">
                     {social.icon}
@@ -637,7 +648,7 @@ function App() {
               <div className="p-8 space-y-8">
                 {/* Header title */}
                 <div className="flex justify-between items-center">
-                  <div className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">{activeProject.category}</div>
+                  <div className="text-xs font-mono text-primary font-bold uppercase tracking-wider">{activeProject.category}</div>
                   <button 
                     onClick={() => setActiveProject(null)}
                     className="p-2 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white cursor-pointer"
@@ -666,7 +677,7 @@ function App() {
                 {/* Detail content */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-bold text-white flex items-center gap-2">
-                    <BookOpen className="w-5 h-5 text-cyan-400" /> Caso de Estudio
+                    <BookOpen className="w-5 h-5 text-primary" /> Caso de Estudio
                   </h4>
                   <p className="text-sm text-gray-400 leading-relaxed font-sans whitespace-pre-line">
                     {activeProject.details}
@@ -679,7 +690,7 @@ function App() {
                     href={activeProject.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] text-white text-center font-bold rounded-xl flex items-center justify-center gap-2 transition-all"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] text-white text-center font-bold rounded-xl flex items-center justify-center gap-2 transition-all"
                   >
                     <ExternalLink className="w-4.5 h-4.5" /> Visitar Demo
                   </a>

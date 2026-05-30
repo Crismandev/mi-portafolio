@@ -2,70 +2,89 @@
 
 @variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-terminal-bg: var(--terminal-bg);
+  --color-terminal-border: var(--terminal-border);
+  --color-terminal-header: var(--terminal-header);
+  
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
 /* --------------------------------------------------------------------------
    1. PREMIUM DESIGN SYSTEM VARIABLES
    -------------------------------------------------------------------------- */
 :root {
-  /* Vibrant color palette */
-  --primary: #00f2fe;
-  --primary-rgb: 0, 242, 254;
-  --secondary: #4facfe;
-  --accent: #9d50bb;
-  --accent-secondary: #f72585;
+  /* Premium, non-generic curated color palette (Deep Violet & Indigo with Warm Amber) */
+  --primary: #8b5cf6;          /* Vibrant Violet */
+  --primary-rgb: 139, 92, 246;
+  --secondary: #6366f1;        /* Indigo */
+  --accent: #3b82f6;           /* Ocean Blue */
+  --accent-secondary: #f43f5e; /* Coral Pink */
   
   /* Core layout variables - Dark Mode (Default) */
-  --bg: #030712;
-  --text: #f9fafb;
-  --text-muted: #9ca3af;
-  --bg-gradient: radial-gradient(circle at 50% 50%, #0b0f19, #030712);
-  --blob-opacity: 0.2;
+  --bg: #07070d;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #0d0c1d, #07070d);
+  --blob-opacity: 0.22;
   
-  /* Glassmorphism system */
-  --card-bg: rgba(17, 24, 39, 0.6);
-  --glass: rgba(17, 24, 39, 0.45);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-shadow: rgba(0, 0, 0, 0.6);
-  --nav-bg: rgba(3, 7, 18, 0.65);
+  /* Glassmorphism system - Dark */
+  --card-bg: rgba(15, 14, 30, 0.55);
+  --glass: rgba(11, 10, 24, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.055);
+  --glass-shadow: rgba(0, 0, 0, 0.55);
+  --nav-bg: rgba(7, 7, 13, 0.7);
   --nav-border: rgba(255, 255, 255, 0.04);
   
-  /* Code / Terminal tokens */
-  --terminal-bg: #090d16;
-  --terminal-border: rgba(255, 255, 255, 0.06);
-  --terminal-header: rgba(17, 24, 39, 0.8);
+  /* Code / Terminal tokens - Dark */
+  --terminal-bg: #0b0a16;
+  --terminal-border: rgba(255, 255, 255, 0.05);
+  --terminal-header: rgba(15, 14, 30, 0.85);
 }
 
 /* Light Theme overrides when .dark is NOT present */
 :root:not(.dark) {
   --bg: #f8fafc;
   --text: #0f172a;
-  --text-muted: #475569;
+  --text-muted: #64748b;
   
-  --bg-gradient: radial-gradient(circle at 50% 50%, #f1f5f9, #e2e8f0);
-  --blob-opacity: 0.35;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #f3e8ff, #f8fafc);
+  --blob-opacity: 0.28;
   
-  --card-bg: rgba(255, 255, 255, 0.7);
-  --glass: rgba(255, 255, 255, 0.75);
-  --glass-border: rgba(0, 0, 0, 0.06);
-  --glass-shadow: rgba(148, 163, 184, 0.15);
-  --nav-bg: rgba(248, 250, 252, 0.75);
-  --nav-border: rgba(0, 0, 0, 0.05);
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --glass: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(139, 92, 246, 0.08);
+  --glass-shadow: rgba(139, 92, 246, 0.04);
+  --nav-bg: rgba(248, 250, 252, 0.8);
+  --nav-border: rgba(139, 92, 246, 0.06);
   
-  /* Code / Terminal tokens */
+  /* Code / Terminal tokens - Light */
   --terminal-bg: #f1f5f9;
-  --terminal-border: rgba(0, 0, 0, 0.06);
-  --terminal-header: rgba(226, 232, 240, 0.8);
+  --terminal-border: rgba(139, 92, 246, 0.08);
+  --terminal-header: rgba(241, 245, 249, 0.9);
 }
 
 /* --------------------------------------------------------------------------
    2. BASE SETUP & TRANSITIONS
    -------------------------------------------------------------------------- */
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   background-color: var(--bg);
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
   transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display, .terminal-window, .terminal-header {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 #root {
