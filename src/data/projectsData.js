@@ -24,9 +24,9 @@ export const projects = [
     desc: "Sistema transaccional de punto de venta (POS) y control de inventario reactivo con sincronización instantánea caja-cocina mediante WebSockets y triggers PostgreSQL.",
     category: "Herramientas",
     tech: ["React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Realtime API"],
-    image: "/assets/images/projects/seapos.png",
+    image: "/assets/images/projects/sticker_swap.png",
     images: [
-      "/assets/images/projects/seapos.png"
+      "/assets/images/projects/sticker_swap.png"
     ],
     link: "https://github.com/Crismandev/cevicheria-pos",
     featured: true,
@@ -103,9 +103,9 @@ export const projects = [
     desc: "Componente React ultra-flexible de alto rendimiento para el manejo de estructuras de estado masivas en formularios corporativos.",
     category: "Herramientas",
     tech: ["React", "Vite", "Tailwind"],
-    image: "/assets/images/projects/multi_selector.png",
+    image: "/assets/images/projects/Multi-selector.jpg",
     images: [
-      "/assets/images/projects/multi_selector.png"
+      "/assets/images/projects/Multi-selector.jpg"
     ],
     link: "https://selector-react-cvsmotion.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -121,9 +121,9 @@ export const projects = [
     desc: "Menú interactivo y plataforma web autogestionable con sincronización directa a canales de WhatsApp empresariales.",
     category: "E-Commerce",
     tech: ["JS", "WhatsApp API", "CSS3"],
-    image: "/assets/images/projects/portafolio_grillmaster.png",
+    image: "/assets/images/projects/portafolio_grillmaster.svg",
     images: [
-      "/assets/images/projects/portafolio_grillmaster.png"
+      "/assets/images/projects/portafolio_grillmaster.svg"
     ],
     link: "https://grillmasterweb.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -139,9 +139,9 @@ export const projects = [
     desc: "Experiencia web interactiva e inmersiva con fondos de shaders 3D reactivos para captación de leads en proyectos tecnológicos futuristas.",
     category: "Landings",
     tech: ["Vanta.js", "Tailwind", "JS"],
-    image: "/assets/images/projects/portafolio_atlas.png",
+    image: "/assets/images/projects/portafolio_atlas.svg",
     images: [
-      "/assets/images/projects/portafolio_atlas.png"
+      "/assets/images/projects/portafolio_atlas.svg"
     ],
     link: "https://3i-atlas.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -157,9 +157,9 @@ export const projects = [
     desc: "Portal web enfocado en la conversión y atracción de leads para servicios de diseño web interactivo de alta gama.",
     category: "Landings",
     tech: ["HTML5", "CSS3", "JS"],
-    image: "/assets/images/projects/portafolio_pixelia.png",
+    image: "/assets/images/projects/portafolio_pixelia.svg",
     images: [
-      "/assets/images/projects/portafolio_pixelia.png"
+      "/assets/images/projects/portafolio_pixelia.svg"
     ],
     link: "https://pixeliaweb.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -175,9 +175,9 @@ export const projects = [
     desc: "Plataforma de reserva y catálogo digital premium para servicios de estética y bienestar con integración en tiempo real.",
     category: "Landings",
     tech: ["Tailwind", "Responsive Design", "JS"],
-    image: "/assets/images/projects/marie_salon_banner.png",
+    image: "/assets/images/projects/marie_salon_banner.jpg",
     images: [
-      "/assets/images/projects/marie_salon_banner.png"
+      "/assets/images/projects/marie_salon_banner.jpg"
     ],
     link: "https://mariesalon.netlify.app/",
     gridSpan: "md:col-span-8",
