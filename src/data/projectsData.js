@@ -24,11 +24,9 @@ export const projects = [
     desc: "Sistema transaccional de punto de venta (POS) y control de inventario reactivo con sincronización instantánea caja-cocina mediante WebSockets y triggers PostgreSQL.",
     category: "Herramientas",
     tech: ["React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Realtime API"],
-    image: "/assets/images/projects/sticker_swap.png",
+    image: "/assets/images/projects/seapos.png",
     images: [
-      "/assets/images/projects/sticker_swap.png",
-      "/assets/images/projects/wicho_featured.png",
-      "/assets/images/projects/marie_salon_banner.jpg"
+      "/assets/images/projects/seapos.png"
     ],
     link: "https://github.com/Crismandev/cevicheria-pos",
     featured: true,
@@ -47,9 +45,7 @@ export const projects = [
     tech: ["Next.js 15", "Supabase", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
     image: "/assets/images/projects/sticker_swap.png",
     images: [
-      "/assets/images/projects/sticker_swap.png",
-      "/assets/images/projects/wicho_featured.png",
-      "/assets/images/projects/marie_salon_banner.jpg"
+      "/assets/images/projects/sticker_swap.png"
     ],
     link: "https://github.com/Crismandev/sticker-swap",
     featured: true,
@@ -68,9 +64,7 @@ export const projects = [
     tech: ["Firebase", "Tailwind CSS", "React", "Node.js"],
     image: "/assets/images/projects/wicho_featured.png",
     images: [
-      "/assets/images/projects/wicho_featured.png",
-      "/assets/images/projects/sticker_swap.png",
-      "/assets/images/projects/marie_salon_banner.jpg"
+      "/assets/images/projects/wicho_featured.png"
     ],
     link: "#",
     featured: false,
@@ -87,9 +81,12 @@ export const projects = [
     desc: "Landing page corporativa premium y portal de agendamiento directo de mesas sin intermediarios para restaurante de alta gama.",
     category: "Landings",
     tech: ["HTML5", "CSS3", "JavaScript", "FontAwesome", "Netlify"],
-    image: "/assets/images/projects/fortunato.png",
+    image: "/assets/images/projects/fortunato_hero.webp",
     images: [
-      "/assets/images/projects/fortunato.png"
+      "/assets/images/projects/fortunato_hero.webp",
+      "/assets/images/projects/fortunato_nosotros.webp",
+      "/assets/images/projects/fortunato_carta.webp",
+      "/assets/images/projects/fortunato_mobile.webp"
     ],
     link: "https://test-fortunato.netlify.app/",
     featured: false,
@@ -106,11 +103,9 @@ export const projects = [
     desc: "Componente React ultra-flexible de alto rendimiento para el manejo de estructuras de estado masivas en formularios corporativos.",
     category: "Herramientas",
     tech: ["React", "Vite", "Tailwind"],
-    image: "/assets/images/projects/Multi-selector.jpg",
+    image: "/assets/images/projects/multi_selector.png",
     images: [
-      "/assets/images/projects/Multi-selector.jpg",
-      "/assets/images/projects/sticker_swap.png",
-      "/assets/images/projects/wicho_featured.png"
+      "/assets/images/projects/multi_selector.png"
     ],
     link: "https://selector-react-cvsmotion.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -128,9 +123,7 @@ export const projects = [
     tech: ["JS", "WhatsApp API", "CSS3"],
     image: "/assets/images/projects/portafolio_grillmaster.png",
     images: [
-      "/assets/images/projects/portafolio_grillmaster.png",
-      "/assets/images/projects/portafolio_atlas.png",
-      "/assets/images/projects/portafolio_pixelia.png"
+      "/assets/images/projects/portafolio_grillmaster.png"
     ],
     link: "https://grillmasterweb.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -148,9 +141,7 @@ export const projects = [
     tech: ["Vanta.js", "Tailwind", "JS"],
     image: "/assets/images/projects/portafolio_atlas.png",
     images: [
-      "/assets/images/projects/portafolio_atlas.png",
-      "/assets/images/projects/portafolio_grillmaster.png",
-      "/assets/images/projects/portafolio_pixelia.png"
+      "/assets/images/projects/portafolio_atlas.png"
     ],
     link: "https://3i-atlas.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -168,9 +159,7 @@ export const projects = [
     tech: ["HTML5", "CSS3", "JS"],
     image: "/assets/images/projects/portafolio_pixelia.png",
     images: [
-      "/assets/images/projects/portafolio_pixelia.png",
-      "/assets/images/projects/portafolio_grillmaster.png",
-      "/assets/images/projects/portafolio_atlas.png"
+      "/assets/images/projects/portafolio_pixelia.png"
     ],
     link: "https://pixeliaweb.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -186,11 +175,9 @@ export const projects = [
     desc: "Plataforma de reserva y catálogo digital premium para servicios de estética y bienestar con integración en tiempo real.",
     category: "Landings",
     tech: ["Tailwind", "Responsive Design", "JS"],
-    image: "/assets/images/projects/marie_salon_banner.jpg",
+    image: "/assets/images/projects/marie_salon_banner.png",
     images: [
-      "/assets/images/projects/marie_salon_banner.jpg",
-      "/assets/images/projects/sticker_swap.png",
-      "/assets/images/projects/wicho_featured.png"
+      "/assets/images/projects/marie_salon_banner.png"
     ],
     link: "https://mariesalon.netlify.app/",
     gridSpan: "md:col-span-8",
@@ -206,11 +193,9 @@ export const projects = [
     desc: "Sistema web cliente-servidor de control de asistencia de personal mediante validación fotográfica y teclado PIN, eliminando el buddy punching.",
     category: "Herramientas",
     tech: ["React 19", "Node.js", "Express", "Tailwind CSS v4", "Webcam API", "JSON Database"],
-    image: "/assets/images/projects/Fortutimer_gif.gif",
+    image: "/assets/images/projects/fortutime.png",
     images: [
-      "/assets/images/projects/Fortutimer_gif.gif",
-      "/assets/images/projects/Multi-selector.jpg",
-      "/assets/images/projects/sticker_swap.png"
+      "/assets/images/projects/fortutime.png"
     ],
     link: "#",
     gridSpan: "md:col-span-4",
