@@ -1,5 +1,25 @@
 export const projects = [
   {
+    id: "boda-inv",
+    title: "Invitación de Boda",
+    desc: "Plataforma interactiva para invitaciones de boda con animaciones fluidas, cuenta regresiva, y confirmación de asistencia en tiempo real.",
+    category: "Landings",
+    tech: ["Astro", "React", "Tailwind CSS", "Framer Motion"],
+    image: "/assets/images/projects/boda_desktop.png",
+    images: [
+      "/assets/images/projects/boda_desktop.png",
+      "/assets/images/projects/boda_mobile.png"
+    ],
+    link: "https://github.com/Crismandev/invitaci-n-boda",
+    featured: true,
+    gridSpan: "md:col-span-8",
+    details: {
+      desafio: "Las invitaciones de boda físicas tradicionales carecen de interactividad, dificultan el seguimiento y confirmación de asistencia (RSVP) por parte de los invitados y generan un alto costo e impacto ecológico.",
+      solucion: "Desarrollé una SPA de alto rendimiento utilizando Astro para una carga instantánea y React con Framer Motion para animaciones elegantes. Integré un diseño responsivo, glassmorphism sutil y componentes interactivos para la cuenta regresiva y el formulario de asistencia.",
+      impacto: "Experiencia memorable e inmersiva para los invitados con una reducción total de costos de impresión y distribución, además de simplificar la gestión centralizada de confirmaciones."
+    }
+  },
+  {
     id: "sentinel-kyc",
     title: "Sentinel — KYC & Autenticación Biométrica",
     desc: "Microservicio distribuido y pasarela híbrida de ciberseguridad para validación de identidad (KYC) y reconocimiento facial biométrico 1-to-1 con inmunidad a ataques de replay y spoofing.",
