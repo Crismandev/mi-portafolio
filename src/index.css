@@ -20,32 +20,32 @@
    1. PREMIUM DESIGN SYSTEM VARIABLES
    -------------------------------------------------------------------------- */
 :root {
-  /* Stitch design system colors (Midnight Kinetic) */
-  --primary: #d0bcff;          /* Light Violet */
-  --primary-rgb: 208, 188, 255;
-  --secondary: #c0c1ff;        /* Light Indigo */
-  --accent: #adc6ff;           /* Light Blue */
-  --accent-secondary: #8b5cf6; /* Vibrant Violet */
+  /* Minimalist Premium & Cyber Emerald Accent */
+  --primary: #10b981;          /* Emerald Green */
+  --primary-rgb: 16, 185, 129;
+  --secondary: #059669;        /* Deep Emerald */
+  --accent: #34d399;           /* Light Emerald */
+  --accent-secondary: #00ff87; /* Neon Mint */
   
   /* Core layout variables - Dark Mode (Default) */
-  --bg: #030303;
-  --text: #e5e2e1;
-  --text-muted: #cbc3d7;
-  --bg-gradient: radial-gradient(circle at 50% 50%, #141313, #030303);
-  --blob-opacity: 0.15;
+  --bg: #050505;               /* Deepest Black */
+  --text: #f3f4f6;             /* Crisp White */
+  --text-muted: #9ca3af;       /* Soft Gray */
+  --bg-gradient: radial-gradient(circle at 50% 0%, #111827 0%, #050505 70%);
+  --blob-opacity: 0.10;
   
-  /* Glassmorphism system - Dark */
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --glass: rgba(20, 19, 19, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-shadow: rgba(0, 0, 0, 0.55);
-  --nav-bg: rgba(20, 19, 19, 0.7);
-  --nav-border: rgba(255, 255, 255, 0.08);
+  /* Advanced Glassmorphism system */
+  --card-bg: rgba(20, 20, 22, 0.4);
+  --glass: rgba(10, 10, 12, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-shadow: rgba(0, 0, 0, 0.8);
+  --nav-bg: rgba(5, 5, 5, 0.75);
+  --nav-border: rgba(255, 255, 255, 0.04);
   
-  /* Code / Terminal tokens - Dark */
-  --terminal-bg: #0b0a16;
-  --terminal-border: rgba(255, 255, 255, 0.08);
-  --terminal-header: rgba(32, 31, 31, 0.85);
+  /* Code / Terminal tokens */
+  --terminal-bg: #0a0a0c;
+  --terminal-border: rgba(255, 255, 255, 0.05);
+  --terminal-header: rgba(15, 15, 18, 0.9);
 }
 
 
@@ -143,29 +143,33 @@ h1, h2, h3, h4, h5, h6, .font-display, .terminal-window, .terminal-header {
    -------------------------------------------------------------------------- */
 .glass {
   background: var(--glass);
-  backdrop-filter: blur(16px) saturate(120%);
-  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 10px 30px 0 var(--glass-shadow);
+  box-shadow: 0 10px 40px 0 var(--glass-shadow);
   transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .glass-card {
   background: var(--card-bg);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 4px 20px 0 var(--glass-shadow);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
   border-radius: 24px;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
               border-color 0.4s ease, 
-              box-shadow 0.4s ease;
+              box-shadow 0.4s ease,
+              background 0.4s ease;
 }
 
 .glass-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(var(--primary-rgb), 0.35);
+  transform: translateY(-4px);
+  background: rgba(30, 30, 35, 0.5);
+  border-color: rgba(var(--primary-rgb), 0.2);
   box-shadow: 0 20px 40px -10px var(--glass-shadow), 
-              0 0 15px -2px rgba(var(--primary-rgb), 0.15);
+              0 0 20px -5px rgba(var(--primary-rgb), 0.15),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
 }
 
 /* Glowing Border Cards - Border-only Spotlight Mask inspired by 21st.dev */

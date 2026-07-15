@@ -55,7 +55,7 @@ export function WebGLBackground({ theme }) {
         vec2 uv = v_texCoord;
         vec2 m = u_mouse / u_resolution;
         
-        float t = u_time * 0.15;
+        float t = u_time * 0.45;
         vec3 color = u_baseColor;
         
         // Flowing background wave logic
@@ -149,17 +149,17 @@ export function WebGLBackground({ theme }) {
 
       // Dynamically send color configurations based on active theme
       if (theme === 'dark') {
-        gl.uniform3f(uBaseColor, 0.01, 0.01, 0.02); // Dark obsidian base
-        gl.uniform3f(uWaveColor1, 0.54, 0.36, 0.96); // Violet
-        gl.uniform3f(uWaveColor2, 0.39, 0.4, 0.95);  // Indigo
-        gl.uniform1f(uWaveOpacity1, 0.12);
-        gl.uniform1f(uWaveOpacity2, 0.08);
+        gl.uniform3f(uBaseColor, 0.02, 0.02, 0.02); // Deepest Black
+        gl.uniform3f(uWaveColor1, 0.06, 0.72, 0.50); // Emerald
+        gl.uniform3f(uWaveColor2, 0.20, 0.82, 0.60); // Light Emerald
+        gl.uniform1f(uWaveOpacity1, 0.06);
+        gl.uniform1f(uWaveOpacity2, 0.04);
       } else {
-        gl.uniform3f(uBaseColor, 0.97, 0.98, 0.99);  // Light base (#f8fafc)
-        gl.uniform3f(uWaveColor1, 0.82, 0.72, 0.98); // Light Pastel Violet
-        gl.uniform3f(uWaveColor2, 0.78, 0.82, 0.98); // Light Pastel Indigo
-        gl.uniform1f(uWaveOpacity1, 0.16);
-        gl.uniform1f(uWaveOpacity2, 0.12);
+        gl.uniform3f(uBaseColor, 0.97, 0.98, 0.99);  // Light base
+        gl.uniform3f(uWaveColor1, 0.64, 0.90, 0.82); // Light Pastel Emerald
+        gl.uniform3f(uWaveColor2, 0.80, 0.95, 0.90); // Light Pastel Cyan
+        gl.uniform1f(uWaveOpacity1, 0.10);
+        gl.uniform1f(uWaveOpacity2, 0.08);
       }
 
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);

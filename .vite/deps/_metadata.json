@@ -1,0 +1,37 @@
+{
+  "hash": "83fa0a48",
+  "configHash": "09cf9328",
+  "lockfileHash": "0f73bf64",
+  "browserHash": "5443b485",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "9fe65f8e",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "bbd1c8ce",
+      "needsInterop": true
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "1b164af6",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "4f4e30e0",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-HUOGFTF4": {
+      "file": "chunk-HUOGFTF4.js"
+    }
+  }
+}

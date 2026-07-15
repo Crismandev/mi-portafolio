@@ -4,27 +4,32 @@ export const projects = [
     title: "Invitación de Boda",
     desc: "Plataforma interactiva para invitaciones de boda con animaciones fluidas, cuenta regresiva, y confirmación de asistencia en tiempo real.",
     category: "Landings",
-    tech: ["Astro", "React", "Tailwind CSS", "Framer Motion"],
-    image: "/assets/images/projects/boda_desktop.png",
+    tech: ["Astro", "React", "Google Stitch", "MCP (AI)"],
+    image: "/assets/images/projects/invitacion_boda_new.png",
     images: [
-      "/assets/images/projects/boda_desktop.png",
+      "/assets/images/projects/invitacion_boda_new.png",
       "/assets/images/projects/boda_mobile.png"
     ],
-    link: "https://github.com/Crismandev/invitaci-n-boda",
+    link: "https://test-boda.netlify.app/",
     featured: true,
     gridSpan: "md:col-span-8",
     details: {
-      desafio: "Las invitaciones de boda físicas tradicionales carecen de interactividad, dificultan el seguimiento y confirmación de asistencia (RSVP) por parte de los invitados y generan un alto costo e impacto ecológico.",
-      solucion: "Desarrollé una SPA de alto rendimiento utilizando Astro para una carga instantánea y React con Framer Motion para animaciones elegantes. Integré un diseño responsivo, glassmorphism sutil y componentes interactivos para la cuenta regresiva y el formulario de asistencia.",
-      impacto: "Experiencia memorable e inmersiva para los invitados con una reducción total de costos de impresión y distribución, además de simplificar la gestión centralizada de confirmaciones."
+      desafio: "Desarrollar una invitación digital interactiva requería un diseño de marca impecable y un desarrollo rápido que no consumiera semanas de codificación manual.",
+      solucion: "Orquesté un agente de IA utilizando Google Stitch para el desarrollo del branding. Conecté el protocolo MCP con el SDK Antigravity para que el agente analizara el contexto y autogenerara la arquitectura del código en Astro y React casi sin intervención.",
+      impacto: "Un despliegue de alta fidelidad en tiempo récord. El flujo automatizado demostró cómo la orquestación de IA puede reducir el tiempo de desarrollo frontend de días a horas.",
+      seo: {
+        title: "Invitación Web Interactiva con Astro y React | Cristhian Mantilla",
+        description: "Desarrollo de invitaciones de boda interactivas utilizando agentes IA y Google Stitch. Desarrollo frontend optimizado y animaciones fluidas.",
+        keywords: "invitación web boda, desarrollo frontend astro, google stitch, orquestación IA"
+      }
     }
   },
   {
     id: "sentinel-kyc",
     title: "Sentinel — KYC & Autenticación Biométrica",
-    desc: "Microservicio distribuido y pasarela híbrida de ciberseguridad para validación de identidad (KYC) y reconocimiento facial biométrico 1-to-1 con inmunidad a ataques de replay y spoofing.",
+    desc: "Microservicio en Go y TypeScript para validación de identidad (KYC) y reconocimiento facial integrado con el SDK de Didit.",
     category: "Herramientas",
-    tech: ["Go (Golang)", "TypeScript", "Express", "HMAC Security", "Ngrok", "Axios"],
+    tech: ["Go (Golang)", "TypeScript", "Didit SDK", "Microservicios"],
     image: "/assets/images/projects/sentinel.png",
     images: [
       "/assets/images/projects/sentinel.png"
@@ -33,36 +38,49 @@ export const projects = [
     featured: true,
     gridSpan: "md:col-span-8",
     details: {
-      desafio: "El fraude por suplantación de identidad y los ataques de inyección de video digital representan el 85% de las pérdidas operativas en plataformas fintech modernas. Los sistemas tradicionales de KYC introducen cuellos de botella de red y son vulnerables a ataques de replay (repetición) debido a firmas de webhook inseguras o de baja velocidad.",
-      solucion: "Diseñé e implementé un microservicio concurrente en Go que encapsula e integra la API v3 de Didit. Desarrollé un middleware de verificación de firmas HMAC-SHA256 con protección criptográfica contra ataques de temporización (timing attacks) y control estricto de ventanas de tiempo (replay prevention). Adicionalmente, el sistema descarga de forma asíncrona la data facial en base64 para una autenticación biométrica pasiva instantánea.",
-      impacto: "Mitigación absoluta (100%) de registros fraudulentos y reducción del tiempo de verificación de identidad de 8 segundos a 1.2 segundos de ejecución en el servidor, aumentando la conversión de registro de nuevos clientes en un 42%."
+      desafio: "En un entorno corporativo de ritmo rápido, necesitaba integrar un flujo de verificación de identidad (KYC) complejo dentro de una arquitectura robusta de microservicios, un stack que estaba aprendiendo sobre la marcha.",
+      solucion: "Asumí el reto arquitectónico en Go y TypeScript. Implementé el servicio de verificación utilizando el repositorio 'favorapp_identity' y me conecté al SDK de Didit para invocar los endpoints de autenticación biométrica de forma segura.",
+      impacto: "Entregué una integración funcional y segura para producción, demostrando adaptabilidad extrema para pivotar del diseño UI a la arquitectura backend de microservicios bajo presión.",
+      seo: {
+        title: "Microservicio KYC Go y TypeScript | Cristhian Mantilla",
+        description: "Integración de autenticación biométrica y KYC usando el SDK de Didit en una arquitectura de microservicios en Go y TypeScript.",
+        keywords: "kyc didit sdk, microservicios go, desarrollo backend typescript, autenticación biométrica"
+      }
     }
   },
   {
     id: "pos-cevicheria",
-    title: "SeaPOS — POS Cevichería en Tiempo Real",
-    desc: "Sistema transaccional de punto de venta (POS) y control de inventario reactivo con sincronización instantánea caja-cocina mediante WebSockets y triggers PostgreSQL.",
+    title: "SeaPOS — POS Cevichería",
+    desc: "Sistema de punto de venta (POS) escalable con roles de usuario, control de mesas e inventario para la industria gastronómica.",
     category: "Herramientas",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Realtime API"],
-    image: "/assets/images/projects/sticker_swap.png",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
+    image: "/assets/images/projects/pos_1.png",
     images: [
-      "/assets/images/projects/sticker_swap.png"
+      "/assets/images/projects/pos_1.png",
+      "/assets/images/projects/pos_4.png",
+      "/assets/images/projects/pos_5.png",
+      "/assets/images/projects/pos_6.png"
     ],
     link: "https://github.com/Crismandev/cevicheria-pos",
     featured: true,
     gridSpan: "md:col-span-4",
     details: {
-      desafio: "En el rubro de restaurantes de alta rotación, la frescura de los insumos perecederos exige un control de inventario estricto. Los POS clásicos introducen latencias que causan la venta de platos agotados, generando frustración en el usuario y colapso de comunicación entre la caja y la cocina en horas de alta demanda.",
-      solucion: "Arquitectura reactiva basada en eventos en tiempo real mediante Supabase WebSockets. Diseñé triggers relacionales y funciones almacenadas (PL/pgSQL) en PostgreSQL que restan y recalculan proporcionalmente los insumos en milisegundos al confirmarse una orden, deshabilitando platos sin stock de forma global.",
-      impacto: "Sincronización instantánea de stock en menos de 50ms, erradicación total de órdenes inválidas y una optimización en la velocidad de despacho de platos de un 35% en cocina."
+      desafio: "El cliente necesitaba un sistema que pudiera ser operado por meseros para tomar pedidos y por el administrador para controlar todo el flujo del local (inventario, tickets y estadísticas), todo en tiempo real.",
+      solucion: "Desarrollé una plataforma con control de acceso basado en roles (RBAC). El mesero cuenta con un menú digital para aperturar mesas, registrar pedidos e imprimir comandas; mientras que el administrador controla precios, stock, usuarios y analíticas mensuales.",
+      impacto: "Un ecosistema digital completo que digitalizó el 100% de la operación del restaurante, eliminando errores de caja y brindando métricas de negocio precisas al dueño.",
+      seo: {
+        title: "Sistema POS para Restaurantes React y Supabase | Cristhian Mantilla",
+        description: "Desarrollo de sistema de punto de venta (POS) escalable para cevicherías. Control de mesas, inventario y roles de usuario.",
+        keywords: "sistema pos restaurante, desarrollo web supabase, control inventario react, software gastronomía"
+      }
     }
   },
   {
     id: "stickerswap",
-    title: "Sticker Swap — FIFA World Cup 2026",
-    desc: "PWA premium de emparejamiento inteligente de doble coincidencia y chat interactivo relacional en tiempo real.",
+    title: "Mundial Live — Álbum Tracker",
+    desc: "Aplicación interactiva para el control e inventario personal de figuras coleccionables del mundial físico.",
     category: "Herramientas",
-    tech: ["Next.js 15", "Supabase", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    tech: ["Next.js", "Supabase", "React", "Tailwind CSS"],
     image: "/assets/images/projects/sticker_swap.png",
     images: [
       "/assets/images/projects/sticker_swap.png"
@@ -71,58 +89,69 @@ export const projects = [
     featured: true,
     gridSpan: "md:col-span-4",
     details: {
-      desafio: "El intercambio tradicional de coleccionables sufre de una ineficiencia matemática del 92%. Los coleccionistas dependen de grupos caóticos o comparaciones manuales de listas de decenas de elementos, careciendo de un algoritmo de cruce que garantice emparejamientos bilaterales óptimos.",
-      solucion: "Desarrollé una PWA inmersiva con gestos táctiles fluidos mediante Framer Motion. El núcleo de la aplicación utiliza un algoritmo de cruce relacional ('Double-Match Optimization') implementado en Supabase que calcula en tiempo real coincidencias mutuas exactas de oferta y demanda.",
-      impacto: "Cruce inteligente de listas al 100% de efectividad antes del encuentro físico, reduciendo el tiempo de intercambio a cero segundos de negociación manual y aumentando la retención en la aplicación."
+      desafio: "Los coleccionistas del mundial perdían el control de qué cartas tenían, cuáles les faltaban y cuántas repetidas poseían para intercambiar, usando listas manuales propensas a errores.",
+      solucion: "Creé una aplicación con un flujo visual muy simple e intuitivo: te logueas y ves el álbum virtual. Con un clic marcas las cartas que posees (verde), con dos clics las repetidas indicando la cantidad (amarillo), dejando el resto como faltantes por defecto (rojo).",
+      impacto: "Una herramienta altamente interactiva que modernizó la experiencia del coleccionista físico, transformando una lista de papel en un panel de control digital ágil.",
+      seo: {
+        title: "App Tracker Álbum Mundial Next.js | Cristhian Mantilla",
+        description: "Aplicación web para control de figuras coleccionables. Sistema interactivo de inventario de cartas (faltantes, repetidas y obtenidas).",
+        keywords: "app álbum mundial, tracker coleccionables, desarrollo next.js, frontend interactivo react"
+      }
     }
   },
   {
     id: "wicho",
-    title: "WICHO EN LÍNEA — E-Commerce Premium",
-    desc: "Plataforma de comercio electrónico con arquitectura Glassmorphism avanzada, optimizada para escaneabilidad y tasas de conversión aceleradas.",
+    title: "WICHO EN LÍNEA — E-Commerce",
+    desc: "Tienda virtual optimizada con imágenes procesadas por IA y sincronización de backend a través de la CLI de Firebase.",
     category: "E-Commerce",
-    tech: ["Firebase", "Tailwind CSS", "React", "Node.js"],
+    tech: ["Firebase CLI", "Tailwind CSS", "React", "Orquestación IA"],
     image: "/assets/images/projects/wicho_featured.png",
     images: [
       "/assets/images/projects/wicho_featured.png"
     ],
-    link: "#",
-    featured: false,
-    gridSpan: "md:col-span-8",
+    link: "https://www.tiendawichoenlinea.com",
+    featured: true,
     details: {
-      desafio: "Las plataformas de e-commerce tradicionales sufren de una tasa de abandono de carrito del 78% debido a interfaces pesadas, saturación visual y flujos de pago complejos que no guían psicológicamente la atención del comprador.",
-      solucion: "Rediseño completo bajo los principios de 'Diseño Continuo' y Glassmorphism para reducir la carga cognitiva. Implementé Tailwind CSS v4 para crear una jerarquía visual de HSL controlado y conecté React con Firebase Store para una sincronización reactiva de inventarios y login fluido.",
-      impacto: "Aumento comprobado del 27% en las tasas de adición al carrito y una velocidad de carga inicial de la página de menos de 400ms en redes móviles estándar."
+      desafio: "El cliente, con pocos recursos tecnológicos, quería digitalizar sus ventas. El reto fue doble: optimizar sus imágenes crudas (PNGs pesados) y configurar mi primer puente real entre Frontend y Backend.",
+      solucion: "Usé IA de forma intensiva: construí un script automatizado para formatear e hiper-optimizar las imágenes del cliente para la web. Como orquestador, guié a la IA para desarrollar el sitio y me sumergí en Firebase CLI, logrando hacer despliegues directos desde la terminal.",
+      impacto: "El cliente obtuvo su escaparate digital de alto rendimiento. Por mi parte, dominé el flujo de despliegue por consola (Firebase/Netlify CLI), integrando por primera vez un backend de forma exitosa.",
+      seo: {
+        title: "E-Commerce Frontend y Firebase | Cristhian Mantilla",
+        description: "Desarrollo de tienda online Wicho en Línea usando React y Firebase. Optimización de assets por IA y despliegues vía CLI.",
+        keywords: "e-commerce firebase react, desarrollo web ia, optimización imágenes web, despliegue cli"
+      }
     }
   },
   {
     id: "fortunato",
-    title: "Fortunato — Terraza, Cocina + Bar",
-    desc: "Landing page corporativa premium y portal de agendamiento directo de mesas sin intermediarios para restaurante de alta gama.",
+    title: "Fortunato — Landing Page",
+    desc: "Landing page corporativa para un restaurante, generada e impulsada mediante flujos avanzados de IA.",
     category: "Landings",
-    tech: ["HTML5", "CSS3", "JavaScript", "FontAwesome", "Netlify"],
+    tech: ["HTML5", "CSS3", "JavaScript", "Generación IA"],
     image: "/assets/images/projects/fortunato_hero.webp",
     images: [
-      "/assets/images/projects/fortunato_hero.webp",
-      "/assets/images/projects/fortunato_nosotros.webp",
-      "/assets/images/projects/fortunato_carta.webp",
-      "/assets/images/projects/fortunato_mobile.webp"
+      "/assets/images/projects/fortunato_hero.webp"
     ],
     link: "https://test-fortunato.netlify.app/",
     featured: false,
     gridSpan: "md:col-span-4",
     details: {
-      desafio: "Los intermediarios de reservas de restaurantes aplican tarifas altas por mesa y fragmentan el embudo de captación de clientes. El restaurante requería un canal web propio de alta fidelidad que mantuviera la sofisticación de sus espacios físicos y automatizara el agendamiento directo.",
-      solucion: "Diseño responsivo a medida con tipografía premium y galerías interactivas enriquecidas con overlays fluidos. Integré un formulario reactivo con validaciones en tiempo real conectado directamente a la central de WhatsApp del restaurante para la confirmación de reservas.",
-      impacto: "Incremento directo del 35% en las reservas directas del establecimiento y una reducción drástica del tiempo de gestión de reservaciones en caja."
+      desafio: "Crear una presencia web formal para el restaurante donde trabajaba en la cocina, requiriendo un despliegue rápido que mantuviera la esencia de la marca gastronómica.",
+      solucion: "Bajo la autorización de gerencia, apliqué estrategias de Prompt Engineering para delegar el 100% de la construcción base del sitio a modelos de Inteligencia Artificial, refinando iterativamente el código para asegurar la calidad final.",
+      impacto: "Un sitio web lanzado en tiempo récord que fortaleció la presencia digital del restaurante, demostrando que la orquestación efectiva de IA supera los métodos de desarrollo tradicional en velocidad.",
+      seo: {
+        title: "Landing Page Restaurante con IA | Cristhian Mantilla",
+        description: "Diseño y desarrollo de landing page para Fortunato. Arquitectura construida mediante orquestación de agentes de IA.",
+        keywords: "landing page restaurante, desarrollo web con ia, prompt engineering frontend, automatización web"
+      }
     }
   },
   {
     id: "selector",
-    title: "Multi Selector Dinámico",
-    desc: "Componente React ultra-flexible de alto rendimiento para el manejo de estructuras de estado masivas en formularios corporativos.",
+    title: "Multi Selector Dinámico (WooCommerce)",
+    desc: "Plugin nativo en PHP y Frontend en React para reemplazar variantes de productos por selectores dinámicos de color (swatches).",
     category: "Herramientas",
-    tech: ["React", "Vite", "Tailwind"],
+    tech: ["React", "PHP", "WordPress", "WooCommerce", "Tailwind"],
     image: "/assets/images/projects/Multi-selector.jpg",
     images: [
       "/assets/images/projects/Multi-selector.jpg"
@@ -130,71 +159,91 @@ export const projects = [
     link: "https://selector-react-cvsmotion.netlify.app/",
     gridSpan: "md:col-span-4",
     details: {
-      desafio: "Las interfaces con listas de selección complejas sufren caídas de rendimiento críticas (input lag > 200ms) al realizar renderizados redundantes del DOM cuando se seleccionan múltiples nodos en tiempo real.",
-      solucion: "Diseñé un componente modular optimizado con técnicas de virtualización de listas y memorización selectiva de estado (useMemo y useCallback), aislando el re-renderizado solo a los elementos que cambian en el viewport.",
-      impacto: "Tiempo de respuesta imperceptible (0ms de input lag visible) procesando listas de más de 10,000 elementos seleccionables de manera concurrente."
+      desafio: "Un cliente de USA con un e-commerce en WordPress (WooCommerce) necesitaba modernizar sus páginas de producto, reemplazando los menús desplegables por defecto por selectores visuales dinámicos (swatches de colores).",
+      solucion: "Desarrollé una solución híbrida: construí la interfaz moderna e interactiva utilizando React y Tailwind, y empaqueté toda la lógica escribiendo un plugin nativo en PHP. Esto permitió al cliente instalarlo en WordPress con un clic y reemplazar las interfaces antiguas.",
+      impacto: "Mejora dramática en la conversión y la UX de la tienda norteamericana, demostrando mi capacidad para incrustar tecnología moderna (React) dentro de monolitos tradicionales (PHP/WordPress).",
+      seo: {
+        title: "Plugin React WooCommerce Swatches | Cristhian Mantilla",
+        description: "Desarrollo de plugin PHP para WordPress y componente React para selectores dinámicos de WooCommerce.",
+        keywords: "plugin woocommerce react, php wordpress desarrollo, swatches dinámicos, frontend e-commerce usa"
+      }
     }
   },
   {
     id: "grillmaster",
-    title: "Grill Master — Sistema Web de Pedidos",
+    title: "Grill Master — Pedidos por WhatsApp",
     desc: "Menú interactivo y plataforma web autogestionable con sincronización directa a canales de WhatsApp empresariales.",
     category: "E-Commerce",
     tech: ["JS", "WhatsApp API", "CSS3"],
-    image: "/assets/images/projects/portafolio_grillmaster.svg",
+    image: "/assets/images/projects/grillmaster.png",
     images: [
-      "/assets/images/projects/portafolio_grillmaster.svg"
+      "/assets/images/projects/grillmaster.png"
     ],
     link: "https://grillmasterweb.netlify.app/",
     gridSpan: "md:col-span-4",
     details: {
-      desafio: "Los pequeños restaurantes carecen de recursos para costear sistemas POS complejos o servidores dedicados, pero necesitan automatizar las solicitudes del menú digital para evitar pérdidas operativas y congestión en las líneas de atención.",
-      solucion: "Desarrollé una SPA responsiva ultraligera en JavaScript puro. La aplicación formatea las selecciones del comensal y las inyecta de forma estructurada mediante la API de WhatsApp, garantizando que el pedido llegue directo a cocina sin costos de infraestructura de servidor.",
-      impacto: "Tiempo de confirmación de pedido reducido a la mitad y cero costos de mantenimiento de servidor para el restaurante, optimizando los márgenes de ganancia."
+      desafio: "Un negocio local de comida rápida perdía ventas por demoras en la atención telefónica y de mensajes. Se necesitaba agilizar la compra sin un sistema complejo.",
+      solucion: "Construí un menú interactivo y fluido que le da el control al cliente. Con solo unos clics, la web empaqueta el pedido y lo envía completamente estructurado al WhatsApp del local.",
+      impacto: "Menos tiempo respondiendo dudas, más tiempo cocinando. Las ventas por delivery se aceleraron gracias a una experiencia de usuario (UX) sin fricción.",
+      seo: {
+        title: "Sistema de Pedidos WhatsApp para Restaurantes | Cristhian Mantilla",
+        description: "Optimicé las ventas de Grillmaster con un sistema web de pedidos automatizado vía WhatsApp. Desarrollo frontend enfocado en conversión y UX.",
+        keywords: "sistema pedidos whatsapp, desarrollo web restaurantes, automatización ventas, frontend e-commerce"
+      }
     }
   },
   {
     id: "atlas",
-    title: "3I/Atlas — Sci-Fi Landing",
-    desc: "Experiencia web interactiva e inmersiva con fondos de shaders 3D reactivos para captación de leads en proyectos tecnológicos futuristas.",
+    title: "3I/Atlas — Landing Futurista",
+    desc: "Experiencia web 'troll' con diseño Sci-Fi y fondos de shaders 3D reactivos para un foro de temática conspirativa.",
     category: "Landings",
     tech: ["Vanta.js", "Tailwind", "JS"],
-    image: "/assets/images/projects/portafolio_atlas.svg",
+    image: "/assets/images/projects/atlas_landing.png",
     images: [
-      "/assets/images/projects/portafolio_atlas.svg"
+      "/assets/images/projects/atlas_landing.png"
     ],
+    featured: true,
     link: "https://3i-atlas.netlify.app/",
-    gridSpan: "md:col-span-4",
     details: {
-      desafio: "Las landing pages temáticas tradicionales tienen una tasa de rebote del 60% al no ofrecer una experiencia inmersiva que retenga el interés visual de los desarrolladores o inversores tecnológicos.",
-      solucion: "Integración de shaders WebGL 3D reactivos (Vanta.js) que se calculan directamente en la GPU, minimizando la carga en el hilo principal del CPU. Diseñé microinteracciones y animaciones CSS coordinadas que reaccionan al scroll y a la posición del cursor.",
-      impacto: "Incremento del tiempo de sesión promedio del usuario a más de 3 minutos y una tasa de retención visual y clics del 80% en el sitio."
+      desafio: "Recrear una estética ultra-conspiranoica y de alta tecnología (Sci-Fi) para una comunidad de nicho, equilibrando el impacto visual sin romper el rendimiento web.",
+      solucion: "Implementé shaders WebGL reactivos con Vanta.js y un diseño oscuro futurista. Estructure todo como una 'broma interna' altamente estilizada, priorizando animaciones fluidas y misterio visual.",
+      impacto: "Un proyecto puramente informativo que demostró mi capacidad para adaptar interfaces a estilos sumamente peculiares y retadores, manteniendo un rendimiento 3D impecable.",
+      seo: {
+        title: "Landing Page Sci-Fi WebGL Vanta.js | Cristhian Mantilla",
+        description: "Diseño web futurista y oscuro utilizando WebGL y Vanta.js. Interfaz inmersiva para comunidades de nicho.",
+        keywords: "landing page sci-fi, webgl vanta.js, diseño web oscuro, animaciones frontend"
+      }
     }
   },
   {
     id: "pixelia",
     title: "Pixelia Services",
-    desc: "Portal web enfocado en la conversión y atracción de leads para servicios de diseño web interactivo de alta gama.",
+    desc: "Emprendimiento web personal para la exposición de portafolio y comercialización de servicios de desarrollo digital.",
     category: "Landings",
-    tech: ["HTML5", "CSS3", "JS"],
-    image: "/assets/images/projects/portafolio_pixelia.svg",
+    tech: ["HTML5", "CSS3", "JS", "Netlify"],
+    image: "/assets/images/projects/pixelia.png",
     images: [
-      "/assets/images/projects/portafolio_pixelia.svg"
+      "/assets/images/projects/pixelia.png"
     ],
     link: "https://pixeliaweb.netlify.app/",
     gridSpan: "md:col-span-4",
     details: {
-      desafio: "Los portales de servicios creativos suelen perder conversión al usar imágenes pesadas y flujos de información densos que fatigan al usuario y perjudican el SEO local.",
-      solucion: "Desarrollo estructurado bajo estándares de Web Vitals de Google. Implementé compresión avanzada de assets, marcado semántico para indexación SEO local y layouts optimizados según patrones de escaneo visual.",
-      impacto: "Puntuación del 98% en Lighthouse y tiempos de carga imperceptibles que eliminan el rebote en la navegación inicial."
+      desafio: "Crear una plataforma propia que sirviera no solo como vitrina técnica, sino como un embudo de ventas real para ofrecer servicios de desarrollo y diseño web.",
+      solucion: "Desarrollé una landing page enfocada en conversión, estructurando claramente los servicios, planes y llamados a la acción, utilizando tecnologías web ligeras para garantizar velocidad máxima.",
+      impacto: "Establecimiento formal de una marca de agencia personal para captar y cerrar clientes, sentando las bases de mi emprendimiento independiente en TI.",
+      seo: {
+        title: "Agencia de Desarrollo Web Pixelia | Cristhian Mantilla",
+        description: "Plataforma de servicios de desarrollo de software y diseño web. Embudo de conversión y exposición de portafolio.",
+        keywords: "agencia desarrollo web, servicios freelance frontend, portafolio pixelia, diseño ui ux"
+      }
     }
   },
   {
     id: "marie",
     title: "Marie Salón & Spa",
-    desc: "Plataforma de reserva y catálogo digital premium para servicios de estética y bienestar con integración en tiempo real.",
+    desc: "Plataforma web con panel de administración y diseño autogestionable impulsado por orquestación de IA y Supabase.",
     category: "Landings",
-    tech: ["Tailwind", "Responsive Design", "JS"],
+    tech: ["Tailwind", "Canva", "MCP AI", "Supabase"],
     image: "/assets/images/projects/marie_salon_banner.jpg",
     images: [
       "/assets/images/projects/marie_salon_banner.jpg"
@@ -202,17 +251,22 @@ export const projects = [
     link: "https://mariesalon.netlify.app/",
     gridSpan: "md:col-span-8",
     details: {
-      desafio: "La fricción en los procesos de reserva manuales por llamada telefónica causa una pérdida del 40% de citas potenciales. El salón requería una vitrina fluida que guiara de forma intuitiva a la confirmación de la cita.",
-      solucion: "Diseño minimalista fluido estructurado en Tailwind CSS. Integré un asistente interactivo por pasos para cotizar servicios, seleccionar especialistas y despachar la solicitud estructurada al WhatsApp empresarial de forma automática.",
-      impacto: "Aumento del 50% en las solicitudes de citas digitales en el primer mes y reducción del tiempo empleado en atención al cliente telefónica."
+      desafio: "Una estilista local necesitaba escalar su presencia digital y administrar sus servicios e imágenes sin tener que lidiar con código complejo.",
+      solucion: "Utilicé Inteligencia Artificial conectada a herramientas de diseño (Canva + MCP) para construir una landing page hermosa a tiempo récord. Le integré un panel de control respaldado por Supabase para que ella misma suba sus fotos y servicios.",
+      impacto: "De un negocio offline a tener un escaparate digital dinámico y autogestionable, aumentando su captación de clientes de manera independiente.",
+      seo: {
+        title: "Landing Page y Panel Admin para Spa | Supabase | Cristhian Mantilla",
+        description: "Desarrollo full-stack de landing page para Marie Salón con panel de administración en Supabase. Diseño web asistido por IA para negocios locales.",
+        keywords: "landing page spa, desarrollo web supabase, panel admin react, diseño web con IA"
+      }
     }
   },
   {
     id: "fortutime",
     title: "Fortutime — Asistencia Biométrica",
-    desc: "Sistema web cliente-servidor de control de asistencia de personal mediante validación fotográfica y teclado PIN, eliminando el buddy punching.",
+    desc: "Sistema web cliente-servidor de control de asistencia mediante validación fotográfica y teclado PIN, generado 100% por IA.",
     category: "Herramientas",
-    tech: ["React 19", "Node.js", "Express", "Tailwind CSS v4", "Webcam API", "JSON Database"],
+    tech: ["React 19", "Node.js", "Webcam API", "AI Generation"],
     image: "/assets/images/projects/fortutime.png",
     images: [
       "/assets/images/projects/fortutime.png"
@@ -220,10 +274,16 @@ export const projects = [
     link: "#",
     gridSpan: "md:col-span-4",
     details: {
-      desafio: "El fraude por suplantación de asistencia (buddy punching) cuesta a las empresas de servicios hasta un 5% de su nómina total. Los sistemas biométricos físicos de huella digital son costosos de instalar y mantener en locales pequeños.",
-      solucion: "Construí una solución web cliente-servidor completa. Utiliza la API de la cámara web HTML5 para tomar una captura fotográfica instantánea al momento de ingresar un código PIN de 4 dígitos en el teclado numérico interactivo, almacenando el registro de asistencia de forma local.",
-      impacto: "Validación del 100% de asistencia libre de suplantaciones, reducción a cero en costos de hardware adicional de control de personal y panel de administración completo."
+      desafio: "Implementar un sistema de asistencia seguro (evitando suplantaciones) para el personal de un restaurante, sin adquirir hardware biométrico costoso ni requerir semanas de codificación manual.",
+      solucion: "Delegué la arquitectura completa a modelos de Inteligencia Artificial mediante ingeniería de prompts. El sistema utiliza la API HTML5 para encender la webcam, tomando una foto de validación en el momento exacto en que el empleado ingresa su PIN.",
+      impacto: "Resolución de un problema de recursos humanos en tiempo récord (código 100% IA), validando asistencias de forma segura y eliminando gastos de hardware en el restaurante.",
+      seo: {
+        title: "Sistema Control Asistencia Biométrica Webcam API | Cristhian Mantilla",
+        description: "Desarrollo automatizado por IA de sistema web de asistencia laboral con teclado PIN y validación fotográfica por cámara web.",
+        keywords: "sistema control asistencia, webcam api react, validación biométrica, desarrollo ai web"
+      }
     }
   }
 ];
+
 export default projects;

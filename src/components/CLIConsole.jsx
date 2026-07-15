@@ -29,16 +29,16 @@ export function CLIConsole() {
         response = 'Comandos disponibles: \n  • "about"    - Breve biografía de Cristhian.\n  • "skills"   - Matrix técnica en formato JSON.\n  • "projects" - Listar últimos desarrollos.\n  • "stats"    - Métricas clave en tiempo real.\n  • "neofetch" - Desplegar resumen visual del sistema.\n  • "secret"   - Revelar un easter egg oculto.\n  • "clear"    - Limpiar pantalla de la consola.';
         break;
       case 'about':
-        response = 'Soy Cristhian Mantilla, desarrollador especializado en ingeniería frontend e interfaces interactivas de alto rendimiento.';
+        response = 'Soy Cristhian Mantilla, Desarrollador de Software y Orquestador de IA. Construyo sistemas integrando frontend moderno con agentes de inteligencia artificial.';
         break;
       case 'skills':
-        response = '{\n  "frontend": ["React 19", "Next.js 15", "Tailwind v4", "Framer Motion"],\n  "backend": ["Supabase", "Firebase", "Node.js", "REST APIs", "WhatsApp API"],\n  "design": ["Glassmorphism", "Figma-to-Code", "Responsive UX"],\n  "artificial_intelligence": ["LLMs integration", "Agents & Orchestration", "n8n Workflows"]\n}';
+        response = '{\n  "frontend": ["React", "Astro", "Tailwind v4", "Vite"],\n  "backend": ["Go (Golang)", "Supabase", "Firebase", "Node.js", "PHP"],\n  "ai_orchestration": ["MCP", "Graphify", "CherryStudio", "Prompt Engineering"],\n  "system_security": ["Debian", "Kali Linux", "Pentesting", "CLI Deployments"]\n}';
         break;
       case 'projects':
         response = 'Proyectos Cargados:\n' + projects.map(p => `  - [${p.category}] ${p.title} -> ${p.desc}`).join('\n');
         break;
       case 'stats':
-        response = 'Métricas:\n  - Proyectos Completados: 10+\n  - Sistemas Desplegados: 5+\n  - Tecnologías core: 15\n  - Carga Optimizada (Lighthouse): 98%+';
+        response = 'Métricas:\n  - Modelos de IA Dominados: 10+\n  - Sistemas en Producción: 6+\n  - Flujos Automatizados: 100%\n  - Enfoque: AI-Driven Development & Ciberseguridad';
         break;
       case 'neofetch':
         response = '      .---.       OS: CrisMan-OS v2.5\n     /     \\      Host: CristhianMantilla.dev\n     \\_.._./      Kernel: React-19.2.0 + Framer-Motion\n     .-[\"\"]-.     Uptime: 24/7 online\n   .\'  ::  \'.    Shell: ReactInteractiveShell\n  /   .::.   \\   DE: Glassmorphism Premium\n |  .::::::.  |  WM: TailwindCSS v4\n |  ::::::::  |  Terminal: Web Terminal\n  \\  \'::::\'  /   CPU: Brain + Coffee\n   \'.  ::  .\'    Memory: High Availability (Vite)\n     \'----\'';
@@ -118,7 +118,7 @@ export function CLIConsole() {
                 form?.dispatchEvent(event);
               }, 50);
             }}
-            className="text-xs font-mono px-3 py-1.5 rounded-md bg-primary/10 hover:bg-primary/20 dark:text-primary text-primary/90 border border-primary/25 hover:border-primary/45 transition-all cursor-pointer"
+            className="text-xs font-mono px-4 py-1.5 rounded-md bg-[#25252d]/50 hover:bg-[#30303b] text-gray-400 hover:text-white border border-white/10 hover:border-white/20 transition-all cursor-pointer"
           >
             {cmd}
           </button>

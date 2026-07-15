@@ -54,13 +54,14 @@ export function ProjectCard({ project, onClick }) {
       transition={{ duration: 0.35 }}
       onClick={onClick}
       onMouseMove={handleCardMouseMove}
-      className={`glass-card glow-card flex flex-col group overflow-hidden cursor-pointer ${
-        project.gridSpan || 'md:col-span-4'
-      }`}
+      className="glass-card glow-card flex flex-col group overflow-hidden cursor-pointer h-full"
     >
-      <div className="h-72 overflow-hidden relative">
-        {/* Glassmorphic spotlight hover overlay inspired by 21st.dev */}
-        <div className="absolute inset-0 bg-[#030303]/35 backdrop-blur-[6px] transition-all duration-500 z-10 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
+      <div className="h-80 overflow-hidden relative">
+        {/* Dark gradient overlay for typography contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent z-10 pointer-events-none"></div>
+        
+        {/* Glassmorphic spotlight hover overlay */}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[4px] transition-all duration-500 z-20 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
           <div className="p-4 bg-primary/20 border border-primary/45 rounded-full text-primary mb-2 scale-75 group-hover:scale-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
             <Eye className="w-6 h-6" />
           </div>
@@ -71,26 +72,30 @@ export function ProjectCard({ project, onClick }) {
         <ProjectCardImage project={project} />
       </div>
       
-      <div className="p-8 flex-grow flex flex-col">
-        <div className="flex justify-between items-start mb-4">
-          <span className="text-xs font-mono dark:text-primary text-primary font-bold uppercase tracking-wider">{project.category}</span>
+      <div className="p-8 flex-grow flex flex-col relative z-20 mt-0">
+        <div className="flex justify-between items-start mb-2">
+          <span className="text-[10px] font-mono text-primary font-bold uppercase tracking-widest">{project.category}</span>
           {project.featured && (
-            <span className="px-3 py-1 bg-primary/10 dark:text-primary text-primary text-xs rounded-full border border-primary/30 font-semibold">
+            <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] rounded-full border border-primary/20 font-bold uppercase tracking-widest">
               Destacado
             </span>
           )}
         </div>
         
-        <h3 className="text-2xl font-bold dark:text-white text-gray-900 mb-3 group-hover:text-primary dark:group-hover:text-primary transition-colors">
+        <h3 className="text-3xl font-bold text-white mb-3 group-hover:text-primary transition-colors font-display tracking-tight">
           {project.title}
         </h3>
-        <p className="dark:text-gray-400 text-gray-600 mb-6 text-sm flex-grow">
+        <p className="text-gray-400 mb-6 text-sm flex-grow font-sans font-light leading-relaxed">
           {project.desc}
         </p>
         
         <div className="flex flex-wrap gap-2 mt-auto">
-          {project.tech.map(t => (
-            <span key={t} className="text-xs px-2.5 py-1 rounded-md dark:bg-white/5 bg-black/5 border dark:border-white/5 border-black/10 dark:text-gray-300 text-gray-700">
+          {project.tech.map((t, idx) => (
+            <span 
+              key={t} 
+              className="text-[10px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-300 font-mono tracking-wide transform transition-all duration-300 opacity-80 group-hover:opacity-100 group-hover:-translate-y-1 hover:!bg-primary/20 hover:!text-white hover:!border-primary/50 cursor-pointer hover:!scale-105"
+              style={{ transitionDelay: `${idx * 50}ms` }}
+            >
               {t}
             </span>
           ))}

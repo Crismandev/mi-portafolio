@@ -26,23 +26,23 @@ export function ProjectDrawer({ activeProject, onClose }) {
         className="fixed inset-0 bg-black z-50 cursor-pointer"
       />
       
-      {/* Drawer sheet */}
+      {/* Immersive modal sheet */}
       <motion.div 
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "100%" }}
-        transition={{ type: "spring", damping: 25, stiffness: 220 }}
-        className="fixed top-0 right-0 h-full w-full max-w-xl bg-white/95 dark:bg-slate-950/95 border-l border-black/10 dark:border-white/10 z-50 shadow-2xl overflow-y-auto text-slate-800 dark:text-gray-200"
+        initial={{ y: "100%", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: "100%", opacity: 0 }}
+        transition={{ type: "spring", damping: 25, stiffness: 200 }}
+        className="fixed inset-0 md:inset-10 lg:inset-y-10 lg:inset-x-24 bg-[#050505] border border-white/10 z-50 shadow-2xl overflow-y-auto text-gray-200 md:rounded-3xl"
       >
-        <div className="p-8 space-y-8">
+        <div className="p-8 md:p-12 lg:p-16 space-y-12">
           {/* Header */}
-          <div className="flex justify-between items-center">
-            <div className="text-xs font-mono text-primary font-bold uppercase tracking-wider">{activeProject.category}</div>
+          <div className="flex justify-between items-center sticky top-0 z-50 -mx-8 px-8 -mt-8 pt-8 pb-4 bg-[#050505]/80 backdrop-blur-md">
+            <div className="text-xs font-mono text-primary font-bold uppercase tracking-widest">{activeProject.category}</div>
             <button 
               onClick={onClose}
-              className="p-2 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white cursor-pointer"
+              className="p-3 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-all cursor-pointer"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
           </div>
           
@@ -106,11 +106,11 @@ export function ProjectDrawer({ activeProject, onClose }) {
           </div>
           
           {/* Title */}
-          <div>
-            <h3 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">{activeProject.title}</h3>
-            <div className="flex flex-wrap gap-2 mt-3">
+          <div className="text-center max-w-3xl mx-auto">
+            <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-6 font-display tracking-tight">{activeProject.title}</h3>
+            <div className="flex flex-wrap justify-center gap-2 mt-3">
               {activeProject.tech.map(t => (
-                <span key={t} className="text-xs px-2.5 py-1 rounded-md bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 text-slate-700 dark:text-gray-300 font-medium">
+                <span key={t} className="text-[10px] px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-300 font-mono tracking-widest uppercase">
                   {t}
                 </span>
               ))}
@@ -118,68 +118,64 @@ export function ProjectDrawer({ activeProject, onClose }) {
           </div>
           
           {/* Detail content */}
-          <div className="space-y-6">
-            <h4 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-primary" /> Caso de Estudio
-            </h4>
-            
+          <div className="max-w-4xl mx-auto space-y-12 pb-10">
             {activeProject.details && typeof activeProject.details === 'object' ? (
-              <div className="space-y-8 relative pl-6 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[1px] before:bg-gradient-to-b before:from-primary/50 before:via-secondary/50 before:to-accent/50">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Desafío */}
-                <div className="relative">
-                  <div className="absolute -left-[21.5px] top-1 w-2.5 h-2.5 rounded-full bg-primary border-2 border-white dark:border-slate-950 shadow-[0_0_8px_rgba(139,92,246,0.6)]" />
-                  <h5 className="text-xs font-mono font-bold uppercase tracking-wider text-primary mb-2.5">
-                    Desafío Técnico
+                <div className="glass-card p-6 bg-black/20">
+                  <h5 className="text-[10px] font-mono font-bold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Desafío
                   </h5>
-                  <p className="text-sm text-slate-700 dark:text-gray-300 leading-relaxed font-sans">
+                  <p className="text-sm text-gray-400 leading-relaxed font-sans font-light">
                     {activeProject.details.desafio}
                   </p>
                 </div>
 
                 {/* Solución */}
-                <div className="relative">
-                  <div className="absolute -left-[21.5px] top-1 w-2.5 h-2.5 rounded-full bg-secondary border-2 border-white dark:border-slate-950 shadow-[0_0_8px_rgba(236,72,153,0.6)]" />
-                  <h5 className="text-xs font-mono font-bold uppercase tracking-wider text-secondary mb-2.5">
-                    Arquitectura de Solución
+                <div className="glass-card p-6 bg-black/20">
+                  <h5 className="text-[10px] font-mono font-bold uppercase tracking-widest text-accent mb-4 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                    Solución
                   </h5>
-                  <p className="text-sm text-slate-700 dark:text-gray-300 leading-relaxed font-sans">
+                  <p className="text-sm text-gray-400 leading-relaxed font-sans font-light">
                     {activeProject.details.solucion}
                   </p>
                 </div>
 
                 {/* Impacto */}
-                <div className="relative">
-                  <div className="absolute -left-[21.5px] top-1 w-2.5 h-2.5 rounded-full bg-accent border-2 border-white dark:border-slate-950 shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
-                  <h5 className="text-xs font-mono font-bold uppercase tracking-wider text-accent mb-2.5">
-                    Impacto Medible
+                <div className="glass-card p-6 bg-black/20">
+                  <h5 className="text-[10px] font-mono font-bold uppercase tracking-widest text-accent-secondary mb-4 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-accent-secondary animate-pulse"></span>
+                    Impacto
                   </h5>
-                  <p className="text-sm text-slate-700 dark:text-gray-300 leading-relaxed font-sans">
+                  <p className="text-sm text-gray-400 leading-relaxed font-sans font-light">
                     {activeProject.details.impacto}
                   </p>
                 </div>
               </div>
             ) : (
-              <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed font-sans whitespace-pre-line">
+              <p className="text-lg text-gray-400 leading-relaxed font-sans font-light whitespace-pre-line text-center max-w-2xl mx-auto">
                 {activeProject.details}
               </p>
             )}
           </div>
           
           {/* Actions */}
-          <div className="pt-6 border-t border-black/5 dark:border-white/5 flex gap-4">
+          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
             <a 
               href={activeProject.link} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex-1 px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] text-white text-center font-bold rounded-xl flex items-center justify-center gap-2 transition-all"
+              className="flex-1 px-8 py-4 bg-white text-black hover:scale-[1.02] text-center font-bold uppercase tracking-widest text-xs rounded-full flex items-center justify-center gap-3 transition-all"
             >
-              <ExternalLink className="w-4.5 h-4.5" /> Visitar Demo
+              <ExternalLink className="w-4 h-4" /> Lanzar Live Demo
             </a>
             <button 
               onClick={onClose}
-              className="px-6 py-3 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 text-slate-800 dark:text-white font-bold rounded-xl transition-all cursor-pointer"
+              className="px-8 py-4 bg-transparent border border-white/20 hover:bg-white/5 text-white font-bold uppercase tracking-widest text-xs rounded-full transition-all cursor-pointer"
             >
-              Cerrar Detalle
+              Cerrar
             </button>
           </div>
         </div>
