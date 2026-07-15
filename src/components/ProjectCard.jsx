@@ -56,7 +56,7 @@ export function ProjectCard({ project, onClick }) {
       onMouseMove={handleCardMouseMove}
       className="glass-card glow-card flex flex-col group overflow-hidden cursor-pointer h-full"
     >
-      <div className="h-80 overflow-hidden relative">
+      <div className="h-64 sm:h-72 md:h-80 overflow-hidden relative">
         {/* Dark gradient overlay for typography contrast */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent z-10 pointer-events-none"></div>
         

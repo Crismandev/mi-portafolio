@@ -24,7 +24,7 @@ const matrixData = {
     progress: [
       { name: "Desarrollo de Componentes y Lógica React", percent: "95%", style: "bg-gradient-to-r from-primary to-accent-secondary" },
       { name: "Integración de APIs y Backend", percent: "90%", style: "bg-gradient-to-r from-secondary to-primary" },
-      { name: "Maquetación Rápida Asistida por IA", percent: "100%", style: "bg-gradient-to-r from-accent to-secondary" }
+      { name: "Desarrollo Ágil & Prompt Engineering", percent: "100%", style: "bg-gradient-to-r from-accent to-secondary" }
     ]
   },
   "Backend": {
@@ -37,6 +37,7 @@ const matrixData = {
     },
     progress: [
       { name: "Despliegue y Configuración Backend/BaaS", percent: "90%", style: "bg-gradient-to-r from-secondary to-primary" },
+      { name: "Arquitectura de Datos y APIs", percent: "85%", style: "bg-gradient-to-r from-primary to-accent" },
       { name: "Arquitectura de Microservicios", percent: "80%", style: "bg-gradient-to-r from-accent to-secondary" },
       { name: "Creación de Plugins Nativos (PHP/WP)", percent: "85%", style: "bg-gradient-to-r from-primary to-accent-secondary" }
     ]
@@ -44,23 +45,23 @@ const matrixData = {
   "AI & Auto": {
     filename: "ai_orchestration.json",
     json: {
-      "modelos": ["Gemini", "Claude", "ChatGPT", "DeepSeek", "Llama (OpenWebUI)"],
-      "orquestacion": ["MCP (Model Context Protocol)", "Graphify (Nodos + Grafo)", "CherryStudio"],
+      "modelos": ["Gemini", "Claude", "ChatGPT", "DeepSeek", "Llama (OpenWebUI)", "Codex", "Qwen"],
+      "orquestacion": ["MCP (Model Context Protocol)", "Graphify (Nodos + Grafo)", "CherryStudio", "APIs IA"],
       "automatizacion": ["Prompt Engineering Múltiple", "Generación de Código Autónomo"],
-      "herramientas": ["Google Stitch", "Diseño en Canva -> Código API"]
+      "herramientas": ["Google Stitch", "Diseño en Canva", "Antigravity Agent Manager", "Antigravity IDE", "KiloCode", "CLAUDE Code", "DeepSeek IDE"]
     },
     progress: [
       { name: "Orquestación de Agentes Locales y Cloud", percent: "98%", style: "bg-gradient-to-r from-accent-secondary to-primary" },
-      { name: "Estrategias de Reducción de Tokens (Graphify)", percent: "90%", style: "bg-gradient-to-r from-secondary to-primary" },
-      { name: "Generación de Sistemas Asistida 100% por IA", percent: "95%", style: "bg-gradient-to-r from-accent to-secondary" }
+      { name: "Estrategias de Reducción de Tokens", percent: "90%", style: "bg-gradient-to-r from-secondary to-primary" },
+      { name: "Generación de Sistemas Asistida por IA", percent: "95%", style: "bg-gradient-to-r from-accent to-secondary" }
     ]
   },
   "Cyber & Sys": {
     filename: "linux_security.json",
     json: {
-      "sistemas": ["Debian", "Kali Linux (VBox)"],
+      "sistemas": ["Debian", "Kali Linux (VBox), windowns 7 - 11 (VMs)"],
       "hacking_etico": ["Pentesting Básico", "Escaneo y Enumeración", "Explotación (msptb2)"],
-      "terminal": ["Uso avanzado de CLI (Netlify, Firebase)"],
+      "terminal": ["Uso de CLI (Netlify, Firebase, Antigravity, Claude Code, Cherry Studio, Open Claw)"],
       "seguridad": ["Autenticación KYC", "Validación Biométrica (Webcam API)"]
     },
     progress: [
@@ -222,7 +223,7 @@ export function App() {
                   initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                  className="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[1.05] mb-6 font-display text-white"
+                  className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[1.05] mb-6 font-display text-white"
                 >
                   Code. <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-white" style={{ animation: 'animateShine 6s linear infinite', backgroundSize: '200% auto' }}>Design.</span> <br />

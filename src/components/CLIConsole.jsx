@@ -26,7 +26,7 @@ export function CLIConsole() {
     let response = "";
     switch (cleanCmd) {
       case 'help':
-        response = 'Comandos disponibles: \n  • "about"    - Breve biografía de Cristhian.\n  • "skills"   - Matrix técnica en formato JSON.\n  • "projects" - Listar últimos desarrollos.\n  • "stats"    - Métricas clave en tiempo real.\n  • "neofetch" - Desplegar resumen visual del sistema.\n  • "secret"   - Revelar un easter egg oculto.\n  • "clear"    - Limpiar pantalla de la consola.';
+        response = 'Comandos disponibles: \n  • "about"    - Breve biografía de Cristhian.\n  • "skills"   - Matrix técnica en formato JSON.\n  • "projects" - Listar últimos desarrollos.\n  • "stack"    - Entorno, herramientas y automatizaciones.\n  • "neofetch" - Desplegar resumen visual del sistema.\n  • "secret"   - Revelar un easter egg oculto.\n  • "clear"    - Limpiar pantalla de la consola.';
         break;
       case 'about':
         response = 'Soy Cristhian Mantilla, Desarrollador de Software y Orquestador de IA. Construyo sistemas integrando frontend moderno con agentes de inteligencia artificial.';
@@ -37,8 +37,8 @@ export function CLIConsole() {
       case 'projects':
         response = 'Proyectos Cargados:\n' + projects.map(p => `  - [${p.category}] ${p.title} -> ${p.desc}`).join('\n');
         break;
-      case 'stats':
-        response = 'Métricas:\n  - Modelos de IA Dominados: 10+\n  - Sistemas en Producción: 6+\n  - Flujos Automatizados: 100%\n  - Enfoque: AI-Driven Development & Ciberseguridad';
+      case 'stack':
+        response = '{\n  "entorno": ["Debian Linux (Trixie)", "Bash/Zsh Scripting", "Git Workflow", "VirtualBox"],\n  "automatizacion": ["Openclaw / OpenWebUI", "Agentes IA (MCP)", "Notion API", "Web Scraping (Puppeteer)"],\n  "herramientas_sistema": ["Ngrok / Port Forwarding", "Vite", "SSH / CLI"]\n}';
         break;
       case 'neofetch':
         response = '      .---.       OS: CrisMan-OS v2.5\n     /     \\      Host: CristhianMantilla.dev\n     \\_.._./      Kernel: React-19.2.0 + Framer-Motion\n     .-[\"\"]-.     Uptime: 24/7 online\n   .\'  ::  \'.    Shell: ReactInteractiveShell\n  /   .::.   \\   DE: Glassmorphism Premium\n |  .::::::.  |  WM: TailwindCSS v4\n |  ::::::::  |  Terminal: Web Terminal\n  \\  \'::::\'  /   CPU: Brain + Coffee\n   \'.  ::  .\'    Memory: High Availability (Vite)\n     \'----\'';
@@ -106,7 +106,7 @@ export function CLIConsole() {
       
       {/* Quick Action Helpers */}
       <div className="flex flex-wrap gap-2 mt-4 justify-center">
-        {['help', 'about', 'skills', 'projects', 'stats'].map(cmd => (
+        {['help', 'about', 'skills', 'projects', 'stack'].map(cmd => (
           <button 
             type="button"
             key={cmd}
