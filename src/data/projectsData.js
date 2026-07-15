@@ -5,10 +5,10 @@ export const projects = [
     desc: "Plataforma interactiva para invitaciones de boda con animaciones fluidas, cuenta regresiva, y confirmación de asistencia en tiempo real.",
     category: "Landings",
     tech: ["Astro", "React", "Google Stitch", "MCP (AI)"],
-    image: "/assets/images/projects/invitacion_boda_new.png",
+    image: "/assets/images/projects/invitacion_boda_new.webp",
     images: [
-      "/assets/images/projects/invitacion_boda_new.png",
-      "/assets/images/projects/boda_mobile.png"
+      "/assets/images/projects/invitacion_boda_new.webp",
+      "/assets/images/projects/boda_mobile.webp"
     ],
     link: "https://test-boda.netlify.app/",
     featured: true,
@@ -30,9 +30,9 @@ export const projects = [
     desc: "Microservicio en Go y TypeScript para validación de identidad (KYC) y reconocimiento facial integrado con el SDK de Didit.",
     category: "Herramientas",
     tech: ["Go (Golang)", "TypeScript", "Didit SDK", "Microservicios"],
-    image: "/assets/images/projects/sentinel.png",
+    image: "/assets/images/projects/sentinel.webp",
     images: [
-      "/assets/images/projects/sentinel.png"
+      "/assets/images/projects/sentinel.webp"
     ],
     link: "https://github.com/Crismandev/kyc-didit",
     featured: true,
@@ -54,12 +54,12 @@ export const projects = [
     desc: "Sistema de punto de venta (POS) escalable con roles de usuario, control de mesas e inventario para la industria gastronómica.",
     category: "Herramientas",
     tech: ["React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
-    image: "/assets/images/projects/pos_1.png",
+    image: "/assets/images/projects/pos_1.webp",
     images: [
-      "/assets/images/projects/pos_1.png",
-      "/assets/images/projects/pos_4.png",
-      "/assets/images/projects/pos_5.png",
-      "/assets/images/projects/pos_6.png"
+      "/assets/images/projects/pos_1.webp",
+      "/assets/images/projects/pos_4.webp",
+      "/assets/images/projects/pos_5.webp",
+      "/assets/images/projects/pos_6.webp"
     ],
     link: "https://github.com/Crismandev/cevicheria-pos",
     featured: true,
@@ -81,9 +81,9 @@ export const projects = [
     desc: "Aplicación interactiva para el control e inventario personal de figuras coleccionables del mundial físico.",
     category: "Herramientas",
     tech: ["Next.js", "Supabase", "React", "Tailwind CSS"],
-    image: "/assets/images/projects/sticker_swap.png",
+    image: "/assets/images/projects/sticker_swap.webp",
     images: [
-      "/assets/images/projects/sticker_swap.png"
+      "/assets/images/projects/sticker_swap.webp"
     ],
     link: "https://github.com/Crismandev/sticker-swap",
     featured: true,
@@ -105,9 +105,9 @@ export const projects = [
     desc: "Tienda virtual optimizada con imágenes procesadas por IA y sincronización de backend a través de la CLI de Firebase.",
     category: "E-Commerce",
     tech: ["Firebase CLI", "Tailwind CSS", "React", "Orquestación IA"],
-    image: "/assets/images/projects/wicho_featured.png",
+    image: "/assets/images/projects/wicho_featured.webp",
     images: [
-      "/assets/images/projects/wicho_featured.png"
+      "/assets/images/projects/wicho_featured.webp"
     ],
     link: "https://www.tiendawichoenlinea.com",
     featured: true,
@@ -152,9 +152,9 @@ export const projects = [
     desc: "Plugin nativo en PHP y Frontend en React para reemplazar variantes de productos por selectores dinámicos de color (swatches).",
     category: "Herramientas",
     tech: ["React", "PHP", "WordPress", "WooCommerce", "Tailwind"],
-    image: "/assets/images/projects/Multi-selector.jpg",
+    image: "/assets/images/projects/Multi-selector.webp",
     images: [
-      "/assets/images/projects/Multi-selector.jpg"
+      "/assets/images/projects/Multi-selector.webp"
     ],
     link: "https://selector-react-cvsmotion.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -175,9 +175,9 @@ export const projects = [
     desc: "Menú interactivo y plataforma web autogestionable con sincronización directa a canales de WhatsApp empresariales.",
     category: "E-Commerce",
     tech: ["JS", "WhatsApp API", "CSS3"],
-    image: "/assets/images/projects/grillmaster.png",
+    image: "/assets/images/projects/grillmaster.webp",
     images: [
-      "/assets/images/projects/grillmaster.png"
+      "/assets/images/projects/grillmaster.webp"
     ],
     link: "https://grillmasterweb.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -198,9 +198,9 @@ export const projects = [
     desc: "Experiencia web 'troll' con diseño Sci-Fi y fondos de shaders 3D reactivos para un foro de temática conspirativa.",
     category: "Landings",
     tech: ["Vanta.js", "Tailwind", "JS"],
-    image: "/assets/images/projects/atlas_landing.png",
+    image: "/assets/images/projects/atlas_landing.webp",
     images: [
-      "/assets/images/projects/atlas_landing.png"
+      "/assets/images/projects/atlas_landing.webp"
     ],
     featured: true,
     link: "https://3i-atlas.netlify.app/",
@@ -221,9 +221,9 @@ export const projects = [
     desc: "Emprendimiento web personal para la exposición de portafolio y comercialización de servicios de desarrollo digital.",
     category: "Landings",
     tech: ["HTML5", "CSS3", "JS", "Netlify"],
-    image: "/assets/images/projects/pixelia.png",
+    image: "/assets/images/projects/pixelia.webp",
     images: [
-      "/assets/images/projects/pixelia.png"
+      "/assets/images/projects/pixelia.webp"
     ],
     link: "https://pixeliaweb.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -244,9 +244,9 @@ export const projects = [
     desc: "Plataforma web con panel de administración y diseño autogestionable impulsado por orquestación de IA y Supabase.",
     category: "Landings",
     tech: ["Tailwind", "Canva", "MCP AI", "Supabase"],
-    image: "/assets/images/projects/marie_salon_banner.jpg",
+    image: "/assets/images/projects/marie_salon_banner.webp",
     images: [
-      "/assets/images/projects/marie_salon_banner.jpg"
+      "/assets/images/projects/marie_salon_banner.webp"
     ],
     link: "https://mariesalon.netlify.app/",
     gridSpan: "md:col-span-8",
@@ -267,9 +267,9 @@ export const projects = [
     desc: "Sistema web cliente-servidor de control de asistencia mediante validación fotográfica y teclado PIN, generado 100% por IA.",
     category: "Herramientas",
     tech: ["React 19", "Node.js", "Webcam API", "AI Generation"],
-    image: "/assets/images/projects/fortutime.png",
+    image: "/assets/images/projects/fortutime.webp",
     images: [
-      "/assets/images/projects/fortutime.png"
+      "/assets/images/projects/fortutime.webp"
     ],
     link: "#",
     gridSpan: "md:col-span-4",

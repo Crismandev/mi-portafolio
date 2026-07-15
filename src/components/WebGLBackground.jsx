@@ -1,9 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export function WebGLBackground({ theme }) {
   const canvasRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+    
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -180,12 +189,18 @@ export function WebGLBackground({ theme }) {
     };
   }, [theme]); // Re-run effect if theme changes to update uniforms
 
+  if (isMobile) return null;
+
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-[1] w-full h-full opacity-100 dark:opacity-60"
-      style={{ display: 'block' }}
+      className="fixed inset-0 w-full h-full pointer-events-none z-[-1]"
+      style={{ 
+        background: 'transparent',
+        opacity: theme === 'dark' ? 0.8 : 0.4
+      }}
     />
   );
 }
+
 export default WebGLBackground;

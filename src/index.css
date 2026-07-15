@@ -109,8 +109,7 @@ h1, h2, h3, h4, h5, h6, .font-display, .terminal-window, .terminal-header {
 .aurora-layer {
   position: absolute;
   inset: -50%;
-  opacity: 0.18;
-  filter: blur(120px);
+  opacity: 0.15;
   mix-blend-mode: screen;
   pointer-events: none;
   background-image: 
@@ -121,6 +120,14 @@ h1, h2, h3, h4, h5, h6, .font-display, .terminal-window, .terminal-header {
     radial-gradient(circle at 30% 85%, #00ff87 0%, transparent 35%);  /* Verde Menta Aurora */
   background-size: 200% 200%;
   animation: aurora-flow 18s infinite alternate ease-in-out;
+}
+
+/* Solo aplicar el blur masivo en PC (Desktop) */
+@media (min-width: 768px) {
+  .aurora-layer {
+    filter: blur(120px);
+    opacity: 0.18;
+  }
 }
 
 @keyframes aurora-flow {
@@ -142,18 +149,26 @@ h1, h2, h3, h4, h5, h6, .font-display, .terminal-window, .terminal-header {
    4. GLASSMORPHISM & CARD EFFECTS
    -------------------------------------------------------------------------- */
 .glass {
-  background: var(--glass);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  background: rgba(10, 10, 12, 0.95);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border: 1px solid var(--glass-border);
   box-shadow: 0 10px 40px 0 var(--glass-shadow);
   transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+@media (min-width: 768px) {
+  .glass {
+    background: var(--glass);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+  }
+}
+
 .glass-card {
-  background: var(--card-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(20, 20, 22, 0.95);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border: 1px solid var(--glass-border);
   box-shadow: 0 8px 32px 0 var(--glass-shadow), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
   border-radius: 24px;
@@ -161,6 +176,14 @@ h1, h2, h3, h4, h5, h6, .font-display, .terminal-window, .terminal-header {
               border-color 0.4s ease, 
               box-shadow 0.4s ease,
               background 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
 }
 
 .glass-card:hover {
