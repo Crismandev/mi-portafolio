@@ -20,18 +20,32 @@ function ProjectCardImage({ project }) {
   }, [images]);
 
   return (
-    <div className="w-full h-full relative overflow-hidden group-hover:scale-105 transition-transform duration-700">
-      {images.map((imgSrc, idx) => (
-        <img
-          key={imgSrc}
-          src={imgSrc}
-          alt={`${project.title} slide`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            idx === index ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
-          loading="lazy"
-        />
-      ))}
+    <div className="w-full h-full relative overflow-hidden group-hover:scale-105 transition-transform duration-700 bg-black/50">
+      {images.map((imgSrc, idx) => {
+        const isMobileOrTablet = imgSrc.includes('_mobile') || imgSrc.includes('_tablet');
+        return (
+          <div
+            key={imgSrc}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 flex justify-center items-center ${
+              idx === index ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          >
+            {isMobileOrTablet && (
+              <img
+                src={imgSrc}
+                className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-110"
+                alt=""
+              />
+            )}
+            <img
+              src={imgSrc}
+              alt={`${project.title} slide`}
+              className={`relative w-full h-full ${isMobileOrTablet ? 'object-contain p-4 drop-shadow-2xl' : 'object-cover object-top'}`}
+              loading="lazy"
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }

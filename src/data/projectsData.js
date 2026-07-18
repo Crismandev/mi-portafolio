@@ -7,8 +7,9 @@ export const projects = [
     tech: ["Astro", "React", "Google Stitch", "MCP (AI)"],
     image: "/assets/images/projects/invitacion_boda_new.webp",
     images: [
-      "/assets/images/projects/invitacion_boda_new.webp",
-      "/assets/images/projects/boda_mobile.webp"
+      "/assets/images/projects/invitacion_boda_new_desktop.webp",
+      "/assets/images/projects/invitacion_boda_new_tablet.webp",
+      "/assets/images/projects/invitacion_boda_new_mobile.webp"
     ],
     link: "https://test-boda.netlify.app/",
     featured: true,
@@ -16,38 +17,15 @@ export const projects = [
     details: {
       desafio: "Desarrollar una invitación digital interactiva requería un diseño de marca impecable y un desarrollo rápido que no consumiera semanas de codificación manual.",
       solucion: "Orquesté un agente de IA utilizando Google Stitch para el desarrollo del branding. Conecté el protocolo MCP con el SDK Antigravity para que el agente analizara el contexto y autogenerara la arquitectura del código en Astro y React casi sin intervención.",
-      impacto: "Un despliegue de alta fidelidad en tiempo récord. El flujo automatizado demostró cómo la orquestación de IA puede reducir el tiempo de desarrollo frontend de días a horas.",
+      impacto: "Un despliegue de alta fidelidad en tiempo récord. El flujo automatizado redujo el tiempo de desarrollo de este tipo de landing de 4 días a tan solo 4 horas.",
       seo: {
         title: "Invitación Web Interactiva con Astro y React | Cristhian Mantilla",
-        description: "Desarrollo de invitaciones de boda interactivas utilizando agentes IA y Google Stitch. Desarrollo frontend optimizado y animaciones fluidas.",
-        keywords: "invitación web boda, desarrollo frontend astro, google stitch, orquestación IA"
+        description: "Construí y orquesté invitaciones de boda interactivas utilizando agentes IA y desarrollo frontend moderno con animaciones fluidas.",
+        keywords: "invitación web boda, desarrollo frontend, orquestación IA"
       }
     }
   },
-  {
-    id: "sentinel-kyc",
-    title: "Sentinel — KYC & Autenticación Biométrica",
-    desc: "Microservicio en Go y TypeScript para validación de identidad (KYC) y reconocimiento facial integrado con el SDK de Didit.",
-    category: "Herramientas",
-    tech: ["Go (Golang)", "TypeScript", "Didit SDK", "Microservicios"],
-    image: "/assets/images/projects/sentinel.webp",
-    images: [
-      "/assets/images/projects/sentinel.webp"
-    ],
-    link: "https://github.com/Crismandev/kyc-didit",
-    featured: true,
-    gridSpan: "md:col-span-8",
-    details: {
-      desafio: "En un entorno corporativo de ritmo rápido, necesitaba integrar un flujo de verificación de identidad (KYC) complejo dentro de una arquitectura robusta de microservicios, un stack que estaba aprendiendo sobre la marcha.",
-      solucion: "Asumí el reto arquitectónico en Go y TypeScript. Implementé el servicio de verificación utilizando el repositorio 'favorapp_identity' y me conecté al SDK de Didit para invocar los endpoints de autenticación biométrica de forma segura.",
-      impacto: "Entregué una integración funcional y segura para producción, demostrando adaptabilidad extrema para pivotar del diseño UI a la arquitectura backend de microservicios bajo presión.",
-      seo: {
-        title: "Microservicio KYC Go y TypeScript | Cristhian Mantilla",
-        description: "Integración de autenticación biométrica y KYC usando el SDK de Didit en una arquitectura de microservicios en Go y TypeScript.",
-        keywords: "kyc didit sdk, microservicios go, desarrollo backend typescript, autenticación biométrica"
-      }
-    }
-  },
+
   {
     id: "pos-cevicheria",
     title: "SeaPOS — POS Cevichería",
@@ -67,10 +45,10 @@ export const projects = [
     details: {
       desafio: "El cliente necesitaba un sistema que pudiera ser operado por meseros para tomar pedidos y por el administrador para controlar todo el flujo del local (inventario, tickets y estadísticas), todo en tiempo real.",
       solucion: "Desarrollé una plataforma con control de acceso basado en roles (RBAC). El mesero cuenta con un menú digital para aperturar mesas, registrar pedidos e imprimir comandas; mientras que el administrador controla precios, stock, usuarios y analíticas mensuales.",
-      impacto: "Un ecosistema digital completo que digitalizó el 100% de la operación del restaurante, eliminando errores de caja y brindando métricas de negocio precisas al dueño.",
+      impacto: "Digitalicé el 100% de la operación del restaurante, automatizando el registro manual de comandas de papel y permitiendo un cierre de caja instantáneo en el sistema.",
       seo: {
         title: "Sistema POS para Restaurantes React y Supabase | Cristhian Mantilla",
-        description: "Desarrollo de sistema de punto de venta (POS) escalable para cevicherías. Control de mesas, inventario y roles de usuario.",
+        description: "Construí un sistema de punto de venta (POS) escalable para cevicherías con control de mesas, inventario y roles de usuario.",
         keywords: "sistema pos restaurante, desarrollo web supabase, control inventario react, software gastronomía"
       }
     }
@@ -81,20 +59,23 @@ export const projects = [
     desc: "Aplicación interactiva para el control e inventario personal de figuras coleccionables del mundial físico.",
     category: "Herramientas",
     tech: ["Next.js", "Supabase", "React", "Tailwind CSS"],
-    image: "/assets/images/projects/sticker_swap.webp",
+    image: "/assets/images/projects/sticker_swap_mobile_1.webp",
     images: [
-      "/assets/images/projects/sticker_swap.webp"
+      "/assets/images/projects/sticker_swap_mobile_1.webp",
+      "/assets/images/projects/sticker_swap_mobile_2.webp",
+      "/assets/images/projects/sticker_swap_mobile_3.webp",
+      "/assets/images/projects/sticker_swap_mobile_4.webp"
     ],
     link: "https://github.com/Crismandev/sticker-swap",
     featured: true,
     gridSpan: "md:col-span-4",
     details: {
       desafio: "Los coleccionistas del mundial perdían el control de qué cartas tenían, cuáles les faltaban y cuántas repetidas poseían para intercambiar, usando listas manuales propensas a errores.",
-      solucion: "Creé una aplicación con un flujo visual muy simple e intuitivo: te logueas y ves el álbum virtual. Con un clic marcas las cartas que posees (verde), con dos clics las repetidas indicando la cantidad (amarillo), dejando el resto como faltantes por defecto (rojo).",
-      impacto: "Una herramienta altamente interactiva que modernizó la experiencia del coleccionista físico, transformando una lista de papel en un panel de control digital ágil.",
+      solucion: "Programé una aplicación con un flujo visual muy simple e intuitivo: te logueas y ves el álbum virtual. Con un clic marcas las cartas que posees (verde), con dos clics las repetidas indicando la cantidad (amarillo), dejando el resto como faltantes por defecto (rojo).",
+      impacto: "Desarrollé una herramienta altamente interactiva que modernizó la experiencia del coleccionista físico, transformando una lista de papel en un panel de control digital ágil.",
       seo: {
         title: "App Tracker Álbum Mundial Next.js | Cristhian Mantilla",
-        description: "Aplicación web para control de figuras coleccionables. Sistema interactivo de inventario de cartas (faltantes, repetidas y obtenidas).",
+        description: "Programé una aplicación web en Next.js para el control de figuras coleccionables. Sistema interactivo de inventario de cartas en tiempo real.",
         keywords: "app álbum mundial, tracker coleccionables, desarrollo next.js, frontend interactivo react"
       }
     }
@@ -107,17 +88,19 @@ export const projects = [
     tech: ["Firebase CLI", "Tailwind CSS", "React", "Orquestación IA"],
     image: "/assets/images/projects/wicho_featured.webp",
     images: [
-      "/assets/images/projects/wicho_featured.webp"
+      "/assets/images/projects/wicho_featured_desktop.webp",
+      "/assets/images/projects/wicho_featured_tablet.webp",
+      "/assets/images/projects/wicho_featured_mobile.webp"
     ],
     link: "https://www.tiendawichoenlinea.com",
     featured: true,
     details: {
       desafio: "El cliente, con pocos recursos tecnológicos, quería digitalizar sus ventas. El reto fue doble: optimizar sus imágenes crudas (PNGs pesados) y configurar mi primer puente real entre Frontend y Backend.",
-      solucion: "Usé IA de forma intensiva: construí un script automatizado para formatear e hiper-optimizar las imágenes del cliente para la web. Como orquestador, guié a la IA para desarrollar el sitio y me sumergí en Firebase CLI, logrando hacer despliegues directos desde la terminal.",
-      impacto: "El cliente obtuvo su escaparate digital de alto rendimiento. Por mi parte, dominé el flujo de despliegue por consola (Firebase/Netlify CLI), integrando por primera vez un backend de forma exitosa.",
+      solucion: "Automaticé el formateo e hiper-optimización de imágenes mediante un pipeline de IA y configuré un backend con Firebase CLI para despliegues directos desde consola.",
+      impacto: "Desplegué un e-commerce de alto rendimiento con carga instantánea y establecí un puente sólido entre Frontend y Backend en producción.",
       seo: {
         title: "E-Commerce Frontend y Firebase | Cristhian Mantilla",
-        description: "Desarrollo de tienda online Wicho en Línea usando React y Firebase. Optimización de assets por IA y despliegues vía CLI.",
+        description: "Desarrollé una tienda online de alto rendimiento usando React y Firebase. Optimización de assets por IA y despliegues vía CLI.",
         keywords: "e-commerce firebase react, desarrollo web ia, optimización imágenes web, despliegue cli"
       }
     }
@@ -138,10 +121,10 @@ export const projects = [
     details: {
       desafio: "Crear una presencia web formal para el restaurante donde trabajaba en la cocina, requiriendo un despliegue rápido que mantuviera la esencia de la marca gastronómica.",
       solucion: "Bajo la autorización de gerencia, apliqué estrategias de Prompt Engineering para delegar el 100% de la construcción base del sitio a modelos de Inteligencia Artificial, refinando iterativamente el código para asegurar la calidad final.",
-      impacto: "Un sitio web lanzado en tiempo récord que fortaleció la presencia digital del restaurante, demostrando que la orquestación efectiva de IA supera los métodos de desarrollo tradicional en velocidad.",
+      impacto: "Lancé un sitio web en tiempo récord que fortaleció la presencia digital del restaurante, demostrando que la orquestación efectiva de IA supera los métodos de desarrollo tradicional en velocidad.",
       seo: {
         title: "Landing Page Restaurante con IA | Cristhian Mantilla",
-        description: "Diseño y desarrollo de landing page para Fortunato. Arquitectura construida mediante orquestación de agentes de IA.",
+        description: "Orquesté el desarrollo de una landing page corporativa para restaurantes utilizando automatización web, IA y prompt engineering.",
         keywords: "landing page restaurante, desarrollo web con ia, prompt engineering frontend, automatización web"
       }
     }
@@ -161,10 +144,10 @@ export const projects = [
     details: {
       desafio: "Un cliente de USA con un e-commerce en WordPress (WooCommerce) necesitaba modernizar sus páginas de producto, reemplazando los menús desplegables por defecto por selectores visuales dinámicos (swatches de colores).",
       solucion: "Desarrollé una solución híbrida: construí la interfaz moderna e interactiva utilizando React y Tailwind, y empaqueté toda la lógica escribiendo un plugin nativo en PHP. Esto permitió al cliente instalarlo en WordPress con un clic y reemplazar las interfaces antiguas.",
-      impacto: "Mejora dramática en la conversión y la UX de la tienda norteamericana, demostrando mi capacidad para incrustar tecnología moderna (React) dentro de monolitos tradicionales (PHP/WordPress).",
+      impacto: "Reemplacé la plantilla nativa de WooCommerce por un frontend moderno en React incrustado vía plugin PHP, mejorando drásticamente la conversión y la UX de la tienda norteamericana.",
       seo: {
         title: "Plugin React WooCommerce Swatches | Cristhian Mantilla",
-        description: "Desarrollo de plugin PHP para WordPress y componente React para selectores dinámicos de WooCommerce.",
+        description: "Desarrollé un plugin PHP para WordPress y un componente React para renderizar selectores dinámicos en e-commerce (WooCommerce).",
         keywords: "plugin woocommerce react, php wordpress desarrollo, swatches dinámicos, frontend e-commerce usa"
       }
     }
@@ -177,7 +160,9 @@ export const projects = [
     tech: ["JS", "WhatsApp API", "CSS3"],
     image: "/assets/images/projects/grillmaster.webp",
     images: [
-      "/assets/images/projects/grillmaster.webp"
+      "/assets/images/projects/grillmaster_desktop.webp",
+      "/assets/images/projects/grillmaster_tablet.webp",
+      "/assets/images/projects/grillmaster_mobile.webp"
     ],
     link: "https://grillmasterweb.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -187,7 +172,7 @@ export const projects = [
       impacto: "Menos tiempo respondiendo dudas, más tiempo cocinando. Las ventas por delivery se aceleraron gracias a una experiencia de usuario (UX) sin fricción.",
       seo: {
         title: "Sistema de Pedidos WhatsApp para Restaurantes | Cristhian Mantilla",
-        description: "Optimicé las ventas de Grillmaster con un sistema web de pedidos automatizado vía WhatsApp. Desarrollo frontend enfocado en conversión y UX.",
+        description: "Construí un sistema web de pedidos automatizado vía WhatsApp enfocado en conversión rápida y UX fluida para restaurantes.",
         keywords: "sistema pedidos whatsapp, desarrollo web restaurantes, automatización ventas, frontend e-commerce"
       }
     }
@@ -200,7 +185,9 @@ export const projects = [
     tech: ["Vanta.js", "Tailwind", "JS"],
     image: "/assets/images/projects/atlas_landing.webp",
     images: [
-      "/assets/images/projects/atlas_landing.webp"
+      "/assets/images/projects/atlas_landing_desktop.webp",
+      "/assets/images/projects/atlas_landing_tablet.webp",
+      "/assets/images/projects/atlas_landing_mobile.webp"
     ],
     featured: true,
     link: "https://3i-atlas.netlify.app/",
@@ -210,7 +197,7 @@ export const projects = [
       impacto: "Un proyecto puramente informativo que demostró mi capacidad para adaptar interfaces a estilos sumamente peculiares y retadores, manteniendo un rendimiento 3D impecable.",
       seo: {
         title: "Landing Page Sci-Fi WebGL Vanta.js | Cristhian Mantilla",
-        description: "Diseño web futurista y oscuro utilizando WebGL y Vanta.js. Interfaz inmersiva para comunidades de nicho.",
+        description: "Programé una experiencia web futurista inmersiva (Sci-Fi) renderizando shaders 3D reactivos con WebGL y Vanta.js sin sacrificar FPS.",
         keywords: "landing page sci-fi, webgl vanta.js, diseño web oscuro, animaciones frontend"
       }
     }
@@ -223,7 +210,9 @@ export const projects = [
     tech: ["HTML5", "CSS3", "JS", "Netlify"],
     image: "/assets/images/projects/pixelia.webp",
     images: [
-      "/assets/images/projects/pixelia.webp"
+      "/assets/images/projects/pixelia_desktop.webp",
+      "/assets/images/projects/pixelia_tablet.webp",
+      "/assets/images/projects/pixelia_mobile.webp"
     ],
     link: "https://pixeliaweb.netlify.app/",
     gridSpan: "md:col-span-4",
@@ -233,7 +222,7 @@ export const projects = [
       impacto: "Establecimiento formal de una marca de agencia personal para captar y cerrar clientes, sentando las bases de mi emprendimiento independiente en TI.",
       seo: {
         title: "Agencia de Desarrollo Web Pixelia | Cristhian Mantilla",
-        description: "Plataforma de servicios de desarrollo de software y diseño web. Embudo de conversión y exposición de portafolio.",
+        description: "Desarrollé una plataforma de servicios digitales orientada a conversión. Embudo de ventas y exposición de portafolio freelance.",
         keywords: "agencia desarrollo web, servicios freelance frontend, portafolio pixelia, diseño ui ux"
       }
     }
@@ -246,7 +235,9 @@ export const projects = [
     tech: ["Tailwind", "Canva", "MCP AI", "Supabase"],
     image: "/assets/images/projects/marie_salon_banner.webp",
     images: [
-      "/assets/images/projects/marie_salon_banner.webp"
+      "/assets/images/projects/marie_salon_banner_desktop.webp",
+      "/assets/images/projects/marie_salon_banner_tablet.webp",
+      "/assets/images/projects/marie_salon_banner_mobile.webp"
     ],
     link: "https://mariesalon.netlify.app/",
     gridSpan: "md:col-span-8",
@@ -256,7 +247,7 @@ export const projects = [
       impacto: "De un negocio offline a tener un escaparate digital dinámico y autogestionable, aumentando su captación de clientes de manera independiente.",
       seo: {
         title: "Landing Page y Panel Admin para Spa | Supabase | Cristhian Mantilla",
-        description: "Desarrollo full-stack de landing page para Marie Salón con panel de administración en Supabase. Diseño web asistido por IA para negocios locales.",
+        description: "Desarrollé una landing page full-stack con panel de administración en Supabase. Diseño web asistido por IA para negocios locales.",
         keywords: "landing page spa, desarrollo web supabase, panel admin react, diseño web con IA"
       }
     }

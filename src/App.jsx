@@ -236,7 +236,7 @@ export function App() {
                   transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
                   className="text-lg sm:text-xl text-gray-400 mb-10 max-w-xl leading-relaxed font-sans font-light"
                 >
-                  Desarrollador de Software y Orquestador de IA. Me especializo en fusionar el desarrollo web moderno con agentes de Inteligencia Artificial locales y en la nube. Desarrollo soluciones optimizadas, transformando flujos tradicionales en sistemas inteligentes y autónomos.
+                  Orquesto ecosistemas de Inteligencia Artificial y construyo arquitecturas web de alto rendimiento utilizando un stack tecnológico moderno. Automatizo flujos tradicionales para transformarlos en plataformas autónomas, escalables y altamente interactivas.
                 </motion.p>
 
                 <motion.div
